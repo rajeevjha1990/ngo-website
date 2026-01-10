@@ -1,0 +1,83 @@
+.about-page {
+    --background: #f9fafc;
+    color: #222;
+}
+
+/* 🌅 Hero Section */
+.hero-section {
+    position: relative;
+    height: 75px;
+    background: url('/assets/SVJ-Images/slide1.jpg') center/cover no-repeat;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+
+/* 🏛️ About Section */
+.about-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    line-height: 1.7;
+}
+
+.about-card h2 {
+    text-align: center;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.about-card p {
+    text-align: justify;
+    font-size: 1rem;
+    color: #444;
+}
+
+.about-card strong {
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* 🎯 Mission */
+.mission-card strong {
+    margin-top: 2rem;
+    color: #007bff;
+}
+
+.vision-card {
+    margin-top: 2rem;
+    color: #007bff;
+}
+
+.program-icon {
+    font-size: 36px;
+    color: var(--ion-color-primary);
+}

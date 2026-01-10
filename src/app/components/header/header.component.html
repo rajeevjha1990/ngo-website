@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+    <ion-buttons slot="start" class="header-left">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+
+      <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="logo" />
+
+      <div class="title-wrapper">
+        <span class="app-title">
+          <span class="purple">सबका</span>
+          <span class="green"> वि</span><span class="purple">का</span><span class="green">स </span>
+          <span class="purple">ज्यति</span>
+        </span>
+        <span class="app-slogan">
+          “गाँव गाँव खुशी, देश खुशहाल”
+        </span>
+      </div>
+    </ion-buttons>
+
+
+
+    <div class="header-right" slot="end">
+
+      <!-- TOP CONTACT BAR -->
+      <div class="top-contact-bar">
+        <span>
+          <ion-icon name="mail-outline"></ion-icon>
+          sabkavikasjayti@gmail.com
+        </span>
+        <span>
+          <ion-icon name="call-outline"></ion-icon>
+          011-69290807
+        </span>
+        <span>
+          <ion-icon name="call-outline"></ion-icon>
+          7209985021
+        </span>
+      </div>
+
+      <!-- MENU LINKS -->
+      <div class="menu-links">
+
+        <a routerLink="/home" routerLinkActive="active" (mouseenter)="closeProgramMenu()">
+          <ion-icon name="home-outline"></ion-icon>
+          <span>Home</span>
+        </a>
+
+        <a routerLink="/about" routerLinkActive="active" (mouseenter)="closeProgramMenu()">
+          <ion-icon name="information-circle-outline"></ion-icon>
+          <span>About</span>
+        </a>
+
+        <a routerLink="/donate" routerLinkActive="active" (mouseenter)="closeProgramMenu()">
+          <ion-icon name="heart-outline"></ion-icon>
+          <span>Donate</span>
+        </a>
+
+        <!-- PROGRAM -->
+        <a class="menu-btn" (mouseenter)="openProgramMenu($event)">
+          <ion-icon name="briefcase-outline"></ion-icon>
+          <span>Program</span>
+          <ion-icon name="chevron-down-outline"></ion-icon>
+        </a>
+
+        <a routerLink="/career" routerLinkActive="active" (mouseenter)="closeProgramMenu()">
+          <ion-icon name="people-outline"></ion-icon>
+          <span>Career</span>
+        </a>
+
+        <a routerLink="/download" routerLinkActive="active" (mouseenter)="closeProgramMenu()">
+          <ion-icon name="download-outline"></ion-icon>
+          <span>Download</span>
+        </a>
+
+      </div>
+
+
+    </div>
+  </ion-toolbar>
+</ion-header>

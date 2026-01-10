@@ -1,0 +1,86 @@
+<ion-header>
+  <app-header></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- Program Card -->
+<ion-card *ngIf="program" class="program-card">
+  <div class="program-container">
+    
+    <!-- LEFT IMAGE -->
+    <div class="program-image">
+      <img [src]="program.hero_image" alt="{{ program.name }}" />
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="program-content">
+      <div class="program-header">
+        <h1>{{ program.name }}</h1>
+        <p class="short-desc">{{ program.short_desc }}</p>
+      </div>
+
+      <div class="description-text">
+        <div *ngFor="let block of program.description_blocks" class="block">
+          <p *ngIf="block.type === 'text'" class="desc-text">
+            {{ block.content }}
+          </p>
+          <ul *ngIf="block.type === 'bullet'" class="bullet-list">
+            <li *ngFor="let item of block.points">✔ {{ item }}</li>
+          </ul>
+        </div>
+      </div>
+      <ion-button   [routerLink]="['/program-apply', program.id]" expand="block" fill="clear">इस कार्यक्रम के लाभ प्राप्त करने के लिए यहाँ क्लिक करें
+        और अपना योगदान दें।</ion-button>
+    </div>
+  </div>
+</ion-card>
+
+  <ion-card class="footer-card">
+    <ion-card-content>
+      <div class="footer-container">
+
+        <!-- About -->
+        <div class="footer-section footer-about">
+          <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="footer-logo" />
+          <h3>सबका विकास ज्यति</h3>
+          <p>
+            गाँव गाँव खुशी, देश खुशहाल।
+            हमारा उद्देश्य — समाज के हर वर्ग को शिक्षा, स्वास्थ्य, रोजगार और विकास के अवसर प्रदान करना।
+          </p>
+          <div class="social-icons">
+            <a><ion-icon name="logo-facebook"></ion-icon></a>
+            <a><ion-icon name="logo-instagram"></ion-icon></a>
+            <a><ion-icon name="logo-youtube"></ion-icon></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-section footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a routerLink="/home">🏠 Home</a></li>
+            <li><a routerLink="/about">ℹ️ About</a></li>
+            <li><a routerLink="/program">🎯 Program</a></li>
+            <li><a routerLink="/career">👥 Career</a></li>
+            <li><a routerLink="/donate">❤️ Donate</a></li>
+            <li><a routerLink="/download">⬇️ Download</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section footer-contact">
+          <h4>Contact Us</h4>
+          <p><ion-icon name="call-outline"></ion-icon> <a href="tel:01169290807">01169290807,7209985021</a></p>
+          <p><ion-icon name="mail-outline"></ion-icon> info@sabkavikasjayti.org</p>
+          <p><ion-icon name="location-outline"></ion-icon> Patna, Bihar, India</p>
+        </div>
+
+      </div>
+
+      <hr />
+      <p class="footer-bottom">© 2025 सबका विकास ज्यति. All Rights Reserved.</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

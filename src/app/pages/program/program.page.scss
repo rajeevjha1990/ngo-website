@@ -1,0 +1,73 @@
+.program-page {
+    --background: #f7f9ff;
+}
+
+/* Page Title */
+.page-heading {
+    text-align: center;
+    margin: 20px 0 35px;
+    padding: 0 12px;
+}
+
+.page-heading h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #1a237e;
+}
+
+.page-heading p {
+    font-size: 15px;
+    color: #4b4b4b;
+}
+
+/* Program Card */
+.program-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+    transition: .35s;
+    margin-bottom: 20px;
+}
+
+.program-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+}
+
+/* Highlight Animation */
+.program-card.highlighted {
+    border: 2px solid var(--ion-color-success);
+    box-shadow: 0 0 18px rgba(45, 211, 111, 0.6);
+    background: #eafff3;
+}
+
+/* Icon */
+.program-icon-box {
+    width: 80px;
+    height: 80px;
+    background: var(--ion-color-primary);
+    color: #fff;
+    margin: 18px auto 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+
+/* Title & Desc */
+.program-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1a237e;
+    text-align: center;
+}
+
+.program-card p {
+    font-size: 14px;
+    color: #555;
+    min-height: 50px;
+    text-align: center;
+}

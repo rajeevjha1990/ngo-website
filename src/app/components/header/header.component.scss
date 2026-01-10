@@ -1,0 +1,257 @@
+/* ===============================
+   HEADER BASE
+================================ */
+.custom-header {
+    --min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: ghostwhite;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+ion-toolbar.custom-header {
+    --background: ghostwhite !important;
+}
+
+/* ===============================
+   LEFT SECTION
+================================ */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+ion-menu-button {
+    display: none;
+}
+
+/* Logo */
+.logo {
+    height: 75px;
+    width: auto;
+}
+
+/* Title */
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.app-title {
+    font-size: 52px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.purple {
+    color: #6a1b9a;
+}
+
+.green {
+    color: #2e7d32;
+}
+
+.app-slogan {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2e7d32;
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* ===============================
+   RIGHT SECTION
+================================ */
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* ===============================
+   TOP CONTACT BAR
+================================ */
+.top-contact-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+}
+
+.top-contact-bar span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.top-contact-bar ion-icon {
+    font-size: 15px;
+    color: #2e7d32;
+}
+
+/* ===============================
+   MENU LINKS
+================================ */
+.menu-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Normal menu links */
+.menu-links a,
+.menu-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.menu-links a:hover,
+.menu-dropdown:hover .dropdown-toggle {
+    background-color: #C5D89D;
+    /* hover background */
+    color: #fff;
+    /* optional: text color on hover */
+}
+
+.menu-links ion-icon {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.menu-links a:hover ion-icon {
+    transform: scale(1.15);
+}
+
+/* ===============================
+   PROGRAM DROPDOWN
+================================ */
+.menu-dropdown {
+    position: relative;
+}
+
+/* Arrow */
+.menu-dropdown .arrow {
+    font-size: 14px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Rotate arrow on hover */
+.menu-dropdown:hover .arrow {
+    transform: rotate(180deg);
+    color: #fff;
+    /* optional: arrow color on hover */
+}
+
+/* Submenu box */
+.submenu {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    min-width: 210px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 6px 0;
+    display: none;
+    z-index: 999;
+}
+
+/* Show submenu on hover */
+.menu-dropdown:hover .submenu {
+    display: block;
+}
+
+/* Submenu items */
+.submenu a {
+    display: block;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.submenu a:hover {
+    background-color: rgba(106, 27, 154, 0.15);
+    color: #6a1b9a;
+}
+
+/* ===============================
+   ICON COLORS
+================================ */
+.menu-links a:nth-child(1) ion-icon {
+    color: #007bff;
+}
+
+.menu-links a:nth-child(2) ion-icon {
+    color: #17a2b8;
+}
+
+.menu-links a:nth-child(3) ion-icon {
+    color: #dc3545;
+}
+
+.menu-links a:nth-child(4) ion-icon {
+    color: #28a745;
+}
+
+.menu-links a:nth-child(6) ion-icon {
+    color: #6f42c1;
+}
+
+.menu-links .menu-btn:hover,
+.menu-links .menu-btn.active {
+    background-color: #C5D89D;
+    /* same as other menus */
+    color: #fff;
+    /* optional: text color change */
+}
+
+/* Icon scale for hover or active */
+.menu-links .menu-btn:hover ion-icon,
+.menu-links .menu-btn.active ion-icon {
+    transform: scale(1.15);
+    color: #fff;
+    /* optional: icon color change */
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+
+    .header-right {
+        display: none;
+    }
+
+    ion-menu-button {
+        display: block !important;
+    }
+
+    .logo {
+        height: 36px;
+    }
+
+    .app-title {
+        font-size: 22px;
+    }
+
+    .app-slogan {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,5 @@
+<ion-list class="program-menu">
+  <ion-item *ngFor="let prog of programs" routerLink="/program-view/{{prog.id}}" class="program-card"
+    [ngClass]="{'highlighted': highlightPrograms.includes(prog.name)}" routerLink="/program/education"
+    (click)="closePopover()">{{prog.name}}</ion-item>
+</ion-list>

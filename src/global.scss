@@ -1,0 +1,251 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.system.css';
+
+ion-content {
+    --background: #f9f9f9;
+    display: block;
+    overflow-y: auto;
+    min-height: 100vh;
+    /* viewport height ke hisaab se */
+    padding-bottom: 100px;
+    /* footer ke liye space */
+}
+
+/* Footer Wrapper */
+.footer-card {
+    margin: 0;
+    border-radius: 0;
+    background: #121212;
+    color: #ffffff;
+    padding-top: 18px;
+}
+
+/* Layout */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+/* Sections */
+.footer-section {
+    flex: 1;
+    min-width: 230px;
+}
+
+/* About */
+.footer-logo {
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 6px;
+}
+
+.footer-about h3 {
+    font-size: 20px;
+    margin: 6px 0;
+    color: #ffca28;
+}
+
+.footer-about p {
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 20px;
+    max-width: 300px;
+}
+
+/* Links */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ffca28;
+    padding-left: 4px;
+}
+
+/* Contact */
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.footer-contact ion-icon {
+    color: #ffca28;
+}
+
+/* Social Icons */
+.social-icons a {
+    font-size: 22px;
+    margin-right: 12px;
+    color: #f5dca7;
+    transition: 0.2s;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+/* Divider & Bottom */
+hr {
+    border: none;
+    border-top: 1px solid #2f2f2f;
+    margin: 20px 0 12px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .footer-about p {
+        max-width: 100%;
+    }
+}
+
+/* ===============================
+   MENU HEADER
+================================ */
+.menu-header {
+    --background: ghostwhite;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 8px;
+    text-align: center;
+}
+
+/* LOGO */
+.menu-logo {
+    height: 70px;
+    width: auto;
+    margin-bottom: 6px;
+}
+
+/* TITLE */
+.menu-title {
+    font-size: 22px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* COLORS */
+.purple {
+    color: #6a1b9a;
+}
+
+.green {
+    color: #2e7d32;
+}
+
+/* SLOGAN */
+.menu-slogan {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2e7d32;
+    margin-top: 4px;
+}
+
+/* ===============================
+   MENU LIST
+================================ */
+ion-item ion-icon {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+/* ICON COLORS */
+ion-icon.home {
+    color: #007bff;
+}
+
+ion-icon.about {
+    color: #17a2b8;
+}
+
+ion-icon.donate {
+    color: #dc3545;
+}
+
+ion-icon.program {
+    color: #28a745;
+}
+
+ion-icon.career {
+    color: #6f42c1;
+}
+
+ion-icon.download {
+    color: #fd7e14;
+}
+
+ion-item:hover {
+    --background: #f5f5f5;
+}

@@ -1,0 +1,114 @@
+<ion-header>
+  <app-header></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="banner">
+    <h1>Career With सबका विकास ज्यति</h1>
+    <p>हमारे साथ मिलकर समाज में सकारात्मक बदलाव लाएँ।</p>
+  </div>
+
+  <!-- About Careers -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>हमारे साथ क्यों जुड़ें?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      हम समाज सशक्तिकरण एवं जागरूकता के लिए समर्पित हैं।
+      यदि आप समाज सेवा के प्रति उत्साही हैं,
+      तो सबका विकास ज्यति आपके लिए सही स्थान है।
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Job Openings -->
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label style="font-size:18px; font-weight:600;">वर्तमान रिक्तियाँ</ion-label>
+    </ion-item>
+    <ion-card *ngFor="let job of jobs">
+      <ion-card-header>
+        <ion-card-title>{{ job.title }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>स्थान:</strong> {{ job.location }}</p>
+        <p><strong>अनुभव:</strong> {{ job.experience }}</p>
+        <p><strong>रोज़गार प्रकार:</strong> {{ job.type }}</p>
+        <ion-button expand="block" color="primary" (click)="apply(job)">आवेदन करें</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+  <!-- Volunteer Section -->
+  <ion-card class="volunteer-card">
+    <ion-card-header>
+      <ion-card-title>स्वयंसेवक बनें</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      अल्पकालिक या दीर्घकालिक स्वयंसेवा से सहयोग कर सकते हैं।
+      मिलकर हम समाज में बदलाव ला सकते हैं।
+      <ion-button expand="block" (click)="openVolunteer()">स्वयंसेवक के रूप में जुड़ें</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- HR Details -->
+  <ion-card color="light">
+    <ion-card-header>
+      <ion-card-title>HR संपर्क</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>ईमेल:</strong> {{ hrEmail }}</p>
+      <p><strong>फ़ोन:</strong> {{ hrPhone }}</p>
+      <p><strong>पता:</strong> {{ hrAddress }}</p>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card class="footer-card">
+    <ion-card-content>
+      <div class="footer-container">
+
+        <!-- About -->
+        <div class="footer-section footer-about">
+          <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="footer-logo" />
+          <h3>सबका विकास ज्यति</h3>
+          <p>
+            गाँव गाँव खुशी, देश खुशहाल।
+            हमारा उद्देश्य — समाज के हर वर्ग को शिक्षा, स्वास्थ्य, रोजगार और विकास के अवसर प्रदान करना।
+          </p>
+          <div class="social-icons">
+            <a><ion-icon name="logo-facebook"></ion-icon></a>
+            <a><ion-icon name="logo-instagram"></ion-icon></a>
+            <a><ion-icon name="logo-youtube"></ion-icon></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-section footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a routerLink="/home">🏠 Home</a></li>
+            <li><a routerLink="/about">ℹ️ About</a></li>
+            <li><a routerLink="/program">🎯 Program</a></li>
+            <li><a routerLink="/career">👥 Career</a></li>
+            <li><a routerLink="/donate">❤️ Donate</a></li>
+            <li><a routerLink="/download">⬇️ Download</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section footer-contact">
+          <h4>Contact Us</h4>
+          <p><ion-icon name="call-outline"></ion-icon> <a href="tel:01169290807">01169290807,7209985021</a></p>
+          <p><ion-icon name="mail-outline"></ion-icon> info@sabkavikasjayti.org</p>
+          <p><ion-icon name="location-outline"></ion-icon> Patna, Bihar, India</p>
+        </div>
+
+      </div>
+
+      <hr />
+
+      <!-- Bottom Strip -->
+      <p class="footer-bottom">© 2025 सबका विकास ज्यति. All Rights Reserved.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

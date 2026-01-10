@@ -1,0 +1,85 @@
+<app-header></app-header>
+
+<ion-content class="donate-page ion-padding" fullscreen>
+  <div class="donate-wrapper">
+
+    <!-- Heading Section -->
+    <div class="header-section">
+      <ion-icon name="heart-circle-outline" class="hero-icon"></ion-icon>
+      <h2 class="title">Make a Difference Today</h2>
+      <p class="subtitle">
+        Your small help can bring a <strong>big change</strong> to someone’s life.
+      </p>
+    </div>
+
+    <!-- QR Section -->
+    <div class="qr-section">
+      <div class="scanner-frame">
+        <img src="assets/SVJ-Images/upi-scanner.jpg" alt="Donation QR Code" class="qr-img" />
+      </div>
+    </div>
+
+    <!-- UPI Info and Button -->
+    <div class="text-section">
+      <div class="upi-info">
+        <ion-icon name="qr-code-outline"></ion-icon>
+        <span>UPI ID: <strong>upay846390en@ujjivan</strong></span>
+      </div>
+
+      <ion-button expand="block" color="success" shape="round" (click)="openUPILink()">
+        <ion-icon slot="start" name="heart-outline"></ion-icon>
+        Donate Now
+      </ion-button>
+
+      <p class="thanks-text">🙏 Thank you for supporting <strong>Sabka Vikas Jayti</strong> 🙏</p>
+    </div>
+  </div>
+  <ion-card class="footer-card">
+    <ion-card-content>
+      <div class="footer-container">
+
+        <!-- About -->
+        <div class="footer-section footer-about">
+          <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="footer-logo" />
+          <h3>सबका विकास ज्यति</h3>
+          <p>
+            गाँव गाँव खुशी, देश खुशहाल।
+            हमारा उद्देश्य — समाज के हर वर्ग को शिक्षा, स्वास्थ्य, रोजगार और विकास के अवसर प्रदान करना।
+          </p>
+          <div class="social-icons">
+            <a><ion-icon name="logo-facebook"></ion-icon></a>
+            <a><ion-icon name="logo-instagram"></ion-icon></a>
+            <a><ion-icon name="logo-youtube"></ion-icon></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-section footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a routerLink="/home">🏠 Home</a></li>
+            <li><a routerLink="/about">ℹ️ About</a></li>
+            <li><a routerLink="/program">🎯 Program</a></li>
+            <li><a routerLink="/career">👥 Career</a></li>
+            <li><a routerLink="/donate">❤️ Donate</a></li>
+            <li><a routerLink="/download">⬇️ Download</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section footer-contact">
+          <h4>Contact Us</h4>
+          <p><ion-icon name="call-outline"></ion-icon> <a href="tel:01169290807">01169290807,7209985021</a></p>
+          <p><ion-icon name="mail-outline"></ion-icon> info@sabkavikasjayti.org</p>
+          <p><ion-icon name="location-outline"></ion-icon> Patna, Bihar, India</p>
+        </div>
+
+      </div>
+
+      <hr />
+
+      <!-- Bottom Strip -->
+      <p class="footer-bottom">© 2025 सबका विकास ज्यति. All Rights Reserved.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

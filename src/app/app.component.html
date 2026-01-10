@@ -1,0 +1,75 @@
+<ion-app>
+
+  <ion-menu contentId="main-content" menuId="main-menu" side="start">
+
+    <!-- MENU HEADER -->
+    <ion-header>
+      <ion-toolbar class="menu-header">
+        <div class="menu-title-wrapper">
+
+          <!-- LOGO -->
+          <img src="assets/SVJ-Images/logo.png" class="menu-logo" />
+
+          <!-- TITLE -->
+          <span class="menu-title">
+            <span class="purple">सबका</span>
+            <span class="green"> वि</span><span class="purple">का</span><span class="green">स </span>
+            <span class="purple">ज्यति</span>
+          </span>
+
+          <!-- SLOGAN -->
+          <span class="menu-slogan">
+            “गाँव गाँव खुशी, देश खुशहाल”
+          </span>
+
+        </div>
+      </ion-toolbar>
+    </ion-header>
+
+    <!-- MENU CONTENT -->
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="true">
+
+          <ion-item routerLink="/home">
+            <ion-icon name="home-outline" slot="start" class="home"></ion-icon>
+            <ion-label>Home</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/about">
+            <ion-icon name="information-circle-outline" slot="start" class="about"></ion-icon>
+            <ion-label>About</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/donate">
+            <ion-icon name="heart-outline" slot="start" class="donate"></ion-icon>
+            <ion-label>Donate</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/program">
+            <ion-icon name="briefcase-outline" slot="start" class="program"></ion-icon>
+            <ion-label>Program</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/career">
+            <ion-icon name="people-outline" slot="start" class="career"></ion-icon>
+            <ion-label>Career</ion-label>
+          </ion-item>
+
+          <ion-item routerLink="/download">
+            <ion-icon name="download-outline" slot="start" class="download"></ion-icon>
+            <ion-label>Download</ion-label>
+          </ion-item>
+
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <!-- MAIN CONTENT -->
+  <div id="main-content">
+    <ion-router-outlet></ion-router-outlet>
+  </div>
+
+</ion-app>

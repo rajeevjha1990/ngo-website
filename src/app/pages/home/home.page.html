@@ -1,0 +1,163 @@
+<app-header></app-header>
+<ion-content class="home-page">
+
+  <!-- 🖼️ Hero + Swiper -->
+  <div class="hero-banner">
+    <swiper-container
+      [slidesPerView]="1"
+      [loop]="true"
+      [autoplay]="{ delay: 3000 }"
+      [pagination]="{ clickable: true }"
+      navigation>
+
+      <swiper-slide>
+        <img src="assets/SVJ-Images/slide1.jpg" alt="Slide 1">
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="assets/SVJ-Images/slide2.jpg" alt="Slide 2">
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="assets/SVJ-Images/slide3.jpg" alt="Slide 3">
+      </swiper-slide>
+
+      <swiper-slide>
+        <img src="assets/SVJ-Images/slide4.jpg" alt="Slide 4">
+      </swiper-slide>
+
+    </swiper-container>
+
+    <!-- Overlay -->
+    <!-- <div class="hero-overlay">
+      <h1>सबका विकास ज्यति</h1>
+      <p>
+        गाँव गाँव खुशी, देश खुशहाल <br><br>
+        It is a non government organization.<br>
+        sabkavikasjayti@gmail.com <br>
+        7209985021
+      </p>
+    </div> -->
+  </div>
+
+  <!-- 📘 Programs -->
+<div class="ngo-info ion-text-center">
+  <p>
+    <strong>It is a non government organization.</strong><br>
+    Act 21/1860 (Reg-S-000216)
+  </p>
+</div>
+
+  <ion-grid class="ion-padding">
+    <h1 style="margin-top: 15px;">Our Programs</h1>
+    <ion-row>
+      <ion-col size-md="6" size-sm="6" size-xs="12" *ngFor="let prog of programs">
+        <ion-card routerLink="/program-view/{{prog.id}}" class="program-card ion-text-center"
+          [ngClass]="{'highlighted': highlightPrograms.includes(prog.name)}">
+          <ion-icon [name]="prog.icon" class="program-icon"></ion-icon>
+          <ion-card-content>
+            <strong>{{prog.name}}</strong>
+            <p>{{prog.short_desc}}</p>
+                      <ion-button size="small" fill="clear" routerLink="/program-view/{{prog.id}}">
+            View More
+          </ion-button>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- 🏆 Achievements -->
+  <section class="achievements ion-padding ion-text-center">
+    <h2>Our Impact</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" size-md="3">
+          <h3>250+</h3>
+          <p>Villages Reached</p>
+        </ion-col>
+        <ion-col size="6" size-md="3">
+          <h3>1000+</h3>
+          <p>Children Educated</p>
+        </ion-col>
+        <ion-col size="6" size-md="3">
+          <h3>500+</h3>
+          <p>Women Empowered</p>
+        </ion-col>
+        <ion-col size="6" size-md="3">
+          <h3>300+</h3>
+          <p>Volunteers</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- 🖼️ Gallery -->
+  <section class="gallery ion-padding">
+    <h2>Our Work in Action</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" size-md="3" *ngFor="let img of galleryImages">
+          <img [src]="img" class="gallery-img" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+  <!-- 💚 Get Involved -->
+  <section class="get-involved ion-padding ion-text-center">
+    <h2>Get Involved</h2>
+    <p>Join hands with us to bring happiness to every village.</p>
+    <ion-button color="success" routerLink="/donate">Donate Now</ion-button>
+  </section>
+
+  <!-- Footer -->
+  <ion-card class="footer-card">
+    <ion-card-content>
+      <div class="footer-container">
+
+        <!-- About -->
+        <div class="footer-section footer-about">
+          <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="footer-logo" />
+          <h3>सबका विकास ज्यति</h3>
+          <p>
+            गाँव गाँव खुशी, देश खुशहाल।
+            हमारा उद्देश्य — समाज के हर वर्ग को शिक्षा, स्वास्थ्य, रोजगार और विकास के अवसर प्रदान करना।
+          </p>
+          <div class="social-icons">
+            <a><ion-icon name="logo-facebook"></ion-icon></a>
+            <a><ion-icon name="logo-instagram"></ion-icon></a>
+            <a><ion-icon name="logo-youtube"></ion-icon></a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-section footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a routerLink="/home">🏠 Home</a></li>
+            <li><a routerLink="/about">ℹ️ About</a></li>
+            <li><a routerLink="/program">🎯 Program</a></li>
+            <li><a routerLink="/career">👥 Career</a></li>
+            <li><a routerLink="/donate">❤️ Donate</a></li>
+            <li><a routerLink="/download">⬇️ Download</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-section footer-contact">
+          <h4>Contact Us</h4>
+          <p><ion-icon name="call-outline"></ion-icon> <a href="tel:01169290807">01169290807,7209985021</a></p>
+          <p><ion-icon name="mail-outline"></ion-icon> info@sabkavikasjayti.org</p>
+          <p><ion-icon name="location-outline"></ion-icon> Patna, Bihar, India</p>
+        </div>
+
+      </div>
+
+      <hr />
+      <p class="footer-bottom">© 2025 सबका विकास ज्यति. All Rights Reserved.</p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
