@@ -19,31 +19,29 @@
 
   <!-- ========== PROGRAM 1: SHG ========== -->
   <div *ngIf="programId === 1">
-    <h3 style="margin-left: 15px;">स्वयं सहायता समूह फॉर्म</h3>
-
-    <ion-item>
-      <ion-input label="समूह का नाम" labelPlacement="floating" [(ngModel)]="formData.extra1"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="सदस्यों की संख्या" labelPlacement="floating" type="number" [(ngModel)]="formData.extra2"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="आपका नाम" labelPlacement="floating" [(ngModel)]="formData.name"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="मोबाइल नंबर" labelPlacement="floating" type="tel" [(ngModel)]="formData.mobile"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="पिनकोड" labelPlacement="floating" type="number" [(ngModel)]="formData.pincode"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="पूरा पता" labelPlacement="floating" [(ngModel)]="formData.address"></ion-input>
-    </ion-item>
+    <ion-card class="programcard">
+      <ion-card-header>
+        <ion-card-title>स्वयं सहायता समूह फॉर्म</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-md="3" size="12">
+          <ion-input fill="outline" label="Name" labelPlacement="floating" [(ngModel)]="formData.name"></ion-input>
+        </ion-col>
+        <ion-col size-md="3" size="12">
+          <ion-input fill="outline" label="Mobile" labelPlacement="floating" [(ngModel)]="formData.mobile"></ion-input>
+        </ion-col>
+        <ion-col size-md="3" size="12">
+          <ion-input fill="outline" label="Pincode" labelPlacement="floating" [(ngModel)]="formData.pincode"></ion-input>
+        </ion-col>
+        <ion-col size-md="3" size="12">
+          <ion-input fill="outline" label="Address" labelPlacement="floating" [(ngModel)]="formData.address"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-card-content>
+    </ion-card>
   </div>
 
   <!-- ========== PROGRAM 2: PAD ========== -->
@@ -75,44 +73,31 @@
 
   <!-- ========== PROGRAM 3: VERMI ========== -->
   <div *ngIf="programId === 3">
-    <h3 style="margin-left: 15px;">बर्मी कम्पोस्ट फॉर्म</h3>
-
-    <ion-item>
-      <ion-input label="किसान का नाम" labelPlacement="floating" [(ngModel)]="formData.name"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="जमीन का क्षेत्रफल" labelPlacement="floating" [(ngModel)]="formData.extra1"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="मोबाइल" labelPlacement="floating" [(ngModel)]="formData.mobile"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="पता" labelPlacement="floating" [(ngModel)]="formData.address"></ion-input>
-    </ion-item>
+<ion-card class="programcard">
+      <ion-card-header>
+        <ion-card-title>बर्मी कम्पोस्ट जागरूकता अभियान फॉर्म</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-md="3" size="12">
+          <ion-input fill="outline" label="Name" labelPlacement="floating" [(ngModel)]="formData.name"></ion-input>
+        </ion-col>
+        <ion-col size-md="3" size="12">
+          <ion-input fill="outline" label="Mobile" labelPlacement="floating" [(ngModel)]="formData.mobile"></ion-input>
+        </ion-col>
+        <ion-col size-md="3" size="12">
+          <ion-input fill="outline" label="Pincode" labelPlacement="floating" [(ngModel)]="formData.pincode"></ion-input>
+        </ion-col>
+        <ion-col size-md="3" size="12">
+          <ion-input fill="outline" label="Address" labelPlacement="floating" [(ngModel)]="formData.address"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </ion-card-content>
+    </ion-card>
   </div>
-
-  <!-- ========== PROGRAM 4 & 5 (BASIC FORM) ========== -->
-  <div *ngIf="programId === 4 || programId === 5">
-    <h3 style="margin-left: 15px;">Registration Form</h3>
-
-    <ion-item>
-      <ion-input label="Name" labelPlacement="floating" [(ngModel)]="formData.name"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="Mobile" labelPlacement="floating" [(ngModel)]="formData.mobile"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="Address" labelPlacement="floating" [(ngModel)]="formData.address"></ion-input>
-    </ion-item>
-  </div>
-
-  <!-- SUBMIT BUTTON -->
-  <ion-button expand="block" color="success" class="ion-margin-top" (click)="proceedToPayment()">
+   <ion-button expand="block" color="success" class="ion-margin-top" (click)="proceedToPayment()">
     Proceed to Payment
   </ion-button>
   
