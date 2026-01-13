@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FooterComponent } from 'src/app/components/footer/footer/footer.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { SHARED_IONIC_MODULES } from 'src/app/shared/shared.ionic';
 
@@ -7,7 +8,7 @@ import { SHARED_IONIC_MODULES } from 'src/app/shared/shared.ionic';
   templateUrl: './about.page.html',
   styleUrls: ['./about.page.scss'],
   standalone: true,
-  imports: [...SHARED_IONIC_MODULES, HeaderComponent]
+  imports: [...SHARED_IONIC_MODULES, HeaderComponent,FooterComponent]
 })
 export class AboutPage implements OnInit {
   programs = [

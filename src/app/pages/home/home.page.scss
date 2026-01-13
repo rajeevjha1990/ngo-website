@@ -1,216 +1,289 @@
-ion-content.home-page {
-  --background: #f9f9f9;
-}
+/* ============================================================
+   सबका विकास ज्यति - प्रोफेशनल 2026 स्टाइलिंग (Ionic Angular)
+   ============================================================ */
 
-/* ================================
-   HERO / SLIDER
-================================ */
-
+/* 🖼️ HERO / SWIPER SECTION */
 .hero-banner {
   position: relative;
   width: 100%;
-  height: auto;
-  max-height: 45vh;
+  height: 60vh;
   overflow: hidden;
   background: #000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; 
+  }
 }
 
-swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-swiper-slide img {
-  width: 100%;
-  height: auto;
-  max-height: 45vh;
-  object-fit: contain; /* 🔹 No crop, no blur */
-  display: block;
-}
-
-/* ================================
-   HERO OVERLAY
-================================ */
-
+/* 🧊 HERO OVERLAY (Glassmorphism Effect) */
 .hero-overlay {
   position: absolute;
-  bottom: 8%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  background: rgba(76, 72, 72, 0.55);
-  padding: 16px 20px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 25px 35px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
   text-align: center;
-  max-width: 90%;
+  width: 85%;
+  max-width: 500px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.95;
+  }
 }
 
-.hero-overlay h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+.ngo-registration-banner {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f7fa 100%);
+  padding: 18px 20px;
+  max-width: 500px; /* थोड़ा और पतला लुक */
+  margin: -40px auto 40px;
+  position: relative;
+  z-index: 99;
+  border-radius: 20px;
+  border-left: 6px solid #2d9cdb;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  .info-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .reg-icon {
+    background: #2d9cdb;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .reg-content {
+    text-align: left;
+    line-height: 1.5; /* लाइनों के बीच की दूरी */
+
+    .org-type {
+      display: block;
+      color: #2d9cdb;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    .reg-details {
+      margin: 0;
+      color: #555;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      color: #0b9012;
+
+
+      .reg-number {
+        display: inline-block;
+        color: #2d9cdb;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        margin-top: 3px;
+        font-size: 1rem;
+      }
+    }
+  }
 }
 
-.hero-overlay p {
-  font-size: 16px;
-  line-height: 1.5;
+/* मोबाइल के लिए */
+@media (max-width: 576px) {
+  .ngo-registration-banner {
+    width: 90%;
+    .info-wrapper { gap: 10px; }
+    .org-type { font-size: 0.85rem; }
+    .reg-details { font-size: 0.9rem; }
+  }
+}
+/* 📘 PROGRAMS SECTION */
+.program-section {
+  background: #fdfdfd;
+  padding-top: 20px;
+  padding-bottom: 50px;
 }
 
-/* ================================
-   PROGRAM CARDS
-================================ */
-
-.program-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
+.section-header {
+  margin-bottom: 40px;
+  .main-title-text {
+    font-size: 28px;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .title-underline {
+    width: 60px;
+    height: 4px;
+    background: #2d9cdb;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
 }
 
-.program-card.highlighted {
-  border: 1px solid #2dd36f;
-  box-shadow: 0 0 15px rgba(45, 211, 111, 0.6);
-  background: #eafff3;
+.modern-program-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #f0f0f0;
+  margin: 15px 10px;
+  padding: 20px 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .card-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: rgba(45, 156, 219, 0.1);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto 20px;
+    transition: 0.3s ease;
+
+    ion-icon {
+      font-size: 34px;
+      color: #2d9cdb;
+    }
+  }
+
+  .prog-name {
+    font-size: 19px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+  }
+
+  .prog-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 45px;
+  }
+
+  .card-footer {
+    border-top: 1px solid #f9f9f9;
+    padding-top: 15px;
+    .view-link {
+      color: #2d9cdb;
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(45, 156, 219, 0.15);
+    border-color: rgba(45, 156, 219, 0.3);
+
+    .card-icon-wrapper {
+      background: #2d9cdb;
+      transform: rotate(-5deg);
+      ion-icon { color: #fff; }
+    }
+  }
+
+  &.is-highlighted {
+    background: linear-gradient(180deg, #ffffff 0%, #f0fff4 100%);
+    border: 1px solid #2dd36f;
+    .card-icon-wrapper { background: rgba(45, 211, 111, 0.15); ion-icon { color: #2dd36f; } }
+  }
 }
 
-.program-icon {
-  font-size: 36px;
-  color: var(--ion-color-primary);
+/* 🏆 IMPACT SECTION */
+.achievements {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2d9cdb 100%);
+  color: white;
+  border-radius: 30px;
+  margin: 30px 15px;
+  padding: 40px 10px;
+  box-shadow: 0 15px 35px rgba(45, 156, 219, 0.3);
+
+  h2 { font-weight: 800; font-size: 26px; margin-bottom: 30px; }
+  h3 { font-size: 34px; color: #ffce00; font-weight: 900; margin: 0; }
+  p { margin-top: 5px; font-weight: 500; opacity: 0.9; font-size: 14px; }
 }
 
-/* ================================
-   ACHIEVEMENTS
-================================ */
-
-.achievements h3 {
-  font-size: 28px;
-  margin: 0;
-  color: var(--ion-color-primary);
-}
-
-.achievements p {
-  margin: 0;
-  color: #555;
-}
-
-/* ================================
-   GALLERY
-================================ */
-
+/* 🖼️ GALLERY */
 .gallery-img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  &:hover { transform: scale(1.05); }
 }
 
-/* ================================
-   GET INVOLVED
-================================ */
-
+/* 💚 GET INVOLVED */
 .get-involved {
-  background: #f0fff6;
-  border-radius: 12px;
-  margin: 16px;
-}
-
-/* ================================
-   RESPONSIVE
-================================ */
-
-@media (max-width: 768px) {
-  .hero-banner {
-    max-height: 35vh;
-  }
-
-  .hero-overlay h1 {
-    font-size: 22px;
-  }
-
-  .hero-overlay p {
-    font-size: 14px;
-  }
-}
-.ngo-info {
-  background: #f0f8ff;       /* light blue background */
-  color: #333;               /* text color */
-  padding: 12px 20px;        /* comfortable padding */
-  border-radius: 8px;        /* rounded corners */
-  max-width: 600px;          /* width limit */
-  margin: 20px auto;         /* center horizontally with top-bottom space */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
-  font-size: 14px;           /* readable font size */
-  line-height: 1.5;          /* spacing between lines */
-  text-align: center;
-
-  strong {
-    color: #2d9cdb;          /* highlight strong text */
+  background: #fff;
+  border: 2px dashed #2dd36f;
+  border-radius: 20px;
+  margin: 25px 15px;
+  padding: 30px;
+  h2 { color: #2dd36f; font-weight: 700; }
+  ion-button {
+    --border-radius: 50px;
+    --padding-start: 40px;
+    --padding-end: 40px;
+    height: 50px;
+    font-weight: 700;
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .ngo-info {
-    font-size: 13px;
-    padding: 10px 15px;
-    max-width: 90%;
+/* मोबाइल के लिए रिस्पॉन्सिव सुधार */
+@media (max-width: 576px) {
+  .hero-banner { height: 45vh; }
+  
+  .ngo-registration-banner {
+    margin: -30px 15px 30px;
+    padding: 15px;
+    .info-wrapper { flex-direction: column; text-align: center; }
+    .reg-content { text-align: center; }
   }
-}
 
-/* ================================
-   FOOTER
-================================ */
-
-.footer-card {
-  margin: 20px;
-  border-radius: 12px;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.footer-logo {
-  width: 80px;
-  margin-bottom: 10px;
-}
-
-.footer-section h3,
-.footer-section h4 {
-  margin-bottom: 10px;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 6px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.social-icons ion-icon {
-  font-size: 24px;
-  margin-right: 10px;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
-  opacity: 0.7;
+  .modern-program-card { margin: 10px 5px; }
+  .achievements h3 { font-size: 26px; }
 }

@@ -45,6 +45,12 @@ ion-content {
     padding-bottom: 100px;
     /* footer ke liye space */
 }
+ion-content.home-page {
+  --background: #f4f7f9;
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  --padding-bottom: 100px !important;
+}
+
 
 /* Footer Wrapper */
 .footer-card {

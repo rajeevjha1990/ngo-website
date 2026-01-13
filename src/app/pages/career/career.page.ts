@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { SHARED_IONIC_MODULES } from 'src/app/shared/shared.ionic';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { NavController } from '@ionic/angular';
+import { FooterComponent } from 'src/app/components/footer/footer/footer.component';
 
 @Component({
   selector: 'app-career',
   templateUrl: './career.page.html',
   styleUrls: ['./career.page.scss'],
   standalone: true,
-  imports: [...SHARED_IONIC_MODULES, HeaderComponent]
+  imports: [...SHARED_IONIC_MODULES, HeaderComponent,FooterComponent]
 })
 export class CareerPage implements OnInit {
   jobs = [
@@ -39,5 +40,7 @@ export class CareerPage implements OnInit {
   openVolunteer() {
     this.navCtrl.navigateForward('/volunteer');
   }
+scrollToJobs(){
 
+}
 }

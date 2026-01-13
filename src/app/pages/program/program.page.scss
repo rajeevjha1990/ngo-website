@@ -1,73 +1,110 @@
 .program-page {
-    --background: #f7f9ff;
+  --background: #fdfdfd;
 }
 
-/* Page Title */
-.page-heading {
-    text-align: center;
-    margin: 20px 0 35px;
-    padding: 0 12px;
+// Hero Header
+.hero-header {
+  background: linear-gradient(135deg, #1a4f8b 0%, #2c3e50 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 50px 50px;
+  margin-bottom: 40px;
+
+  h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 15px; }
+  p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
 }
 
-.page-heading h1 {
-    font-size: 32px;
-    margin-bottom: 8px;
-    font-weight: 700;
-    color: #1a237e;
+// Impact Stats
+.impact-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  .impact-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 120px;
+
+    .count { display: block; font-size: 1.5rem; font-weight: 800; color: #ffce00; }
+    .label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+  }
 }
 
-.page-heading p {
-    font-size: 15px;
-    color: #4b4b4b;
+// Section Title
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  h2 { font-weight: 700; color: #1a4f8b; margin-bottom: 10px; }
+  p { color: #666; font-style: italic; }
 }
 
-/* Program Card */
-.program-card {
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-    transition: .35s;
-    margin-bottom: 20px;
-}
+// Custom Program Card (Modern Glass UI)
+.custom-program-card {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  height: 100%;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #eee;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  cursor: pointer;
+  overflow: hidden;
 
-.program-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
-}
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    border-color: var(--ion-color-primary);
 
-/* Highlight Animation */
-.program-card.highlighted {
-    border: 2px solid var(--ion-color-success);
-    box-shadow: 0 0 18px rgba(45, 211, 111, 0.6);
-    background: #eafff3;
-}
+    .card-icon { transform: rotateY(360deg); background: var(--ion-color-primary); color: white; }
+  }
 
-/* Icon */
-.program-icon-box {
-    width: 80px;
-    height: 80px;
-    background: var(--ion-color-primary);
-    color: #fff;
-    margin: 18px auto 12px;
-    border-radius: 50%;
+  .featured-badge {
+    position: absolute;
+    top: 15px; right: -30px;
+    background: #ff4757;
+    color: white;
+    padding: 5px 35px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    transform: rotate(45deg);
+  }
+
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    background: #f0f4f8;
+    border-radius: 18px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 38px;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--ion-color-primary);
+    margin-bottom: 20px;
+    transition: all 0.6s ease;
+  }
+
+  .card-body {
+    h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #2d3436; }
+    p { color: #636e72; line-height: 1.6; font-size: 0.95rem; margin-bottom: 20px; }
+  }
+
+  .card-footer {
+    .read-more {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--ion-color-primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      ion-icon { font-size: 1.2rem; }
+    }
+  }
 }
 
-/* Title & Desc */
-.program-card h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: #1a237e;
-    text-align: center;
-}
-
-.program-card p {
-    font-size: 14px;
-    color: #555;
-    min-height: 50px;
-    text-align: center;
-}
+.container-padding { padding: 0 15px 50px; max-width: 1200px; margin: 0 auto; }

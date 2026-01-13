@@ -27,46 +27,53 @@
       </swiper-slide>
 
     </swiper-container>
-
-    <!-- Overlay -->
-    <!-- <div class="hero-overlay">
-      <h1>सबका विकास ज्यति</h1>
-      <p>
-        गाँव गाँव खुशी, देश खुशहाल <br><br>
-        It is a non government organization.<br>
-        sabkavikasjayti@gmail.com <br>
-        7209985021
-      </p>
-    </div> -->
   </div>
 
   <!-- 📘 Programs -->
-<div class="ngo-info ion-text-center">
-  <p>
-    <strong>It is a non government organization.</strong><br>
-    Act 21/1860 (Reg-S-000216)
-  </p>
+<div class="ngo-registration-banner">
+  <div class="info-wrapper">
+    <div class="reg-icon">
+      <ion-icon name="ribbon-outline"></ion-icon>
+    </div>
+    <div class="reg-content">
+      <span class="org-type">It is a non government organization.</span>
+      <p class="reg-details">
+        Registration Act 21/1860 <br>
+        <span class="reg-number">Reg-S-000216</span>
+      </p>
+    </div>
+  </div>
 </div>
 
-  <ion-grid class="ion-padding">
-    <h1 style="margin-top: 15px;">Our Programs</h1>
-    <ion-row>
-      <ion-col size-md="6" size-sm="6" size-xs="12" *ngFor="let prog of programs">
-        <ion-card routerLink="/program-view/{{prog.id}}" class="program-card ion-text-center"
-          [ngClass]="{'highlighted': highlightPrograms.includes(prog.name)}">
-          <ion-icon [name]="prog.icon" class="program-icon"></ion-icon>
-          <ion-card-content>
-            <strong>{{prog.name}}</strong>
-            <p>{{prog.short_desc}}</p>
-                      <ion-button size="small" fill="clear" routerLink="/program-view/{{prog.id}}">
-            View More
-          </ion-button>
 
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+
+<ion-grid class="ion-padding program-section">
+  <div class="section-header ion-text-center">
+    <h2 class="main-title-text">Our Key Programs</h2>
+    <div class="title-underline"></div>
+  </div>
+
+  <ion-row class="ion-justify-content-center">
+    <ion-col size-md="4" size-sm="6" size-xs="12" *ngFor="let prog of programs">
+      <ion-card routerLink="/program-view/{{prog.id}}" class="modern-program-card"
+        [ngClass]="{'is-highlighted': highlightPrograms.includes(prog.name)}">
+        
+        <div class="card-icon-wrapper">
+          <ion-icon [name]="prog.icon"></ion-icon>
+        </div>
+
+        <ion-card-content>
+          <h3 class="prog-name">{{prog.name}}</h3>
+          <p class="prog-desc">{{prog.short_desc}}</p>
+          
+          <div class="card-footer">
+            <span class="view-link">View Details <ion-icon name="arrow-forward-outline"></ion-icon></span>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 
   <!-- 🏆 Achievements -->
   <section class="achievements ion-padding ion-text-center">
@@ -111,53 +118,5 @@
     <p>Join hands with us to bring happiness to every village.</p>
     <ion-button color="success" routerLink="/donate">Donate Now</ion-button>
   </section>
-
-  <!-- Footer -->
-  <ion-card class="footer-card">
-    <ion-card-content>
-      <div class="footer-container">
-
-        <!-- About -->
-        <div class="footer-section footer-about">
-          <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="footer-logo" />
-          <h3>सबका विकास ज्यति</h3>
-          <p>
-            गाँव गाँव खुशी, देश खुशहाल।
-            हमारा उद्देश्य — समाज के हर वर्ग को शिक्षा, स्वास्थ्य, रोजगार और विकास के अवसर प्रदान करना।
-          </p>
-          <div class="social-icons">
-            <a><ion-icon name="logo-facebook"></ion-icon></a>
-            <a><ion-icon name="logo-instagram"></ion-icon></a>
-            <a><ion-icon name="logo-youtube"></ion-icon></a>
-          </div>
-        </div>
-
-        <!-- Links -->
-        <div class="footer-section footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a routerLink="/home">🏠 Home</a></li>
-            <li><a routerLink="/about">ℹ️ About</a></li>
-            <li><a routerLink="/program">🎯 Program</a></li>
-            <li><a routerLink="/career">👥 Career</a></li>
-            <li><a routerLink="/donate">❤️ Donate</a></li>
-            <li><a routerLink="/download">⬇️ Download</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div class="footer-section footer-contact">
-          <h4>Contact Us</h4>
-          <p><ion-icon name="call-outline"></ion-icon> <a href="tel:01169290807">01169290807,7209985021</a></p>
-          <p><ion-icon name="mail-outline"></ion-icon> info@sabkavikasjayti.org</p>
-          <p><ion-icon name="location-outline"></ion-icon> Patna, Bihar, India</p>
-        </div>
-
-      </div>
-
-      <hr />
-      <p class="footer-bottom">© 2025 सबका विकास ज्यति. All Rights Reserved.</p>
-    </ion-card-content>
-  </ion-card>
-
+<app-footer></app-footer>
 </ion-content>

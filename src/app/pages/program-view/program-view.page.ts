@@ -3,13 +3,14 @@ import { ActivatedRoute } from '@angular/router';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { SHARED_IONIC_MODULES } from 'src/app/shared/shared.ionic';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FooterComponent } from 'src/app/components/footer/footer/footer.component';
 
 @Component({
   selector: 'app-program-view',
   templateUrl: './program-view.page.html',
   styleUrls: ['./program-view.page.scss'],
   standalone: true,
-  imports: [...SHARED_IONIC_MODULES, HeaderComponent],
+  imports: [...SHARED_IONIC_MODULES, HeaderComponent,FooterComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 })

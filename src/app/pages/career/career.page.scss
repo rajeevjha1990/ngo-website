@@ -1,20 +1,101 @@
-.banner {
-    background: url('/assets/SVJ-Images/career-banner.jpg') center/cover no-repeat;
-    text-align: center;
-    padding: 60px 20px;
-    color: black;
+// Hero Section
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('/assets/SVJ-Images/career-bg.jpg') center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  .hero-overlay {
+    padding: 20px;
+    h1 { font-size: 2rem; font-weight: 700; margin-bottom: 10px; }
+    p { font-size: 1.1rem; opacity: 0.9; }
+  }
 }
 
-.banner h1 {
-    font-size: 28px;
-    font-weight: bold;
+.main-container {
+  padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.banner p {
-    font-size: 15px;
-    margin-top: 5px;
+// Section Headings
+.section-title {
+  text-align: center;
+  margin-top: 30px;
+  h2 { font-weight: 700; color: var(--ion-color-primary); }
+  .underline {
+    width: 60px;
+    height: 4px;
+    background: var(--ion-color-secondary);
+    margin: 10px auto;
+    border-radius: 2px;
+  }
 }
 
-.volunteer-card ion-button {
-    margin-top: 12px;
+.section-desc {
+  text-align: center;
+  color: #666;
+  font-size: 1.05rem;
+  margin-bottom: 40px;
+}
+
+// Job Cards
+.job-card {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+
+  &:hover { transform: translateY(-5px); }
+  
+  ion-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  .job-info {
+    p { 
+      display: flex; 
+      align-items: center; 
+      gap: 8px; 
+      color: #555;
+      margin: 8px 0;
+    }
+    ion-icon { color: var(--ion-color-primary); }
+  }
+
+  .apply-btn { margin-top: 15px; --border-radius: 8px; }
+}
+
+// Special Boxes
+.volunteer-box, .hr-box {
+  padding: 25px;
+  border-radius: 15px;
+  height: 100%;
+  color: white;
+}
+
+.volunteer-box {
+  background: var(--ion-color-primary);
+  h3 { margin-top: 0; }
+}
+
+.hr-box {
+  background: #f4f5f8;
+  color: #333;
+  border: 1px solid #ddd;
+  h3 { color: var(--ion-color-primary); margin-top: 0; }
+  p { display: flex; align-items: center; gap: 10px; margin: 12px 0; }
+}
+
+// Footer Tweaks
+.footer-card {
+  margin-top: 50px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
 }

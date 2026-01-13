@@ -54,6 +54,12 @@ import {
   laptopOutline,
   cogOutline,
   logoWhatsapp,
+  logoFacebook,
+  logoInstagram,
+  logoYoutube,
+  logoLinkedin,
+  constructOutline,
+  sunnyOutline
 } from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 
@@ -110,7 +116,13 @@ addIcons({
   'nutrition-outline': nutritionOutline,
   'laptop-outline': laptopOutline,
   'cog-outline': cogOutline,
-  'logo-whatsapp': logoWhatsapp
+  'logo-whatsapp': logoWhatsapp,
+  'logo-facebook':logoFacebook,
+  'logo-instagram':logoInstagram,
+  'logo-youtube':logoYoutube,
+  'logo-linkedin':logoLinkedin,
+  'construct-outline':constructOutline,
+  'sunny-outline':sunnyOutline
 });
 
 bootstrapApplication(AppComponent, appConfig)

@@ -1,114 +1,77 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <app-header></app-header>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-  <div class="banner">
-    <h1>Career With सबका विकास ज्यति</h1>
-    <p>हमारे साथ मिलकर समाज में सकारात्मक बदलाव लाएँ।</p>
+<ion-content [fullscreen]="true" class="home-page">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="hero-overlay">
+      <h1>सबका विकास ज्यति के साथ करियर</h1>
+      <p>समाज में बदलाव की शुरुआत आपसे होती है।</p>
+      <ion-button shape="round" color="light" (click)="scrollToJobs()">रिक्तियाँ देखें</ion-button>
+    </div>
   </div>
 
-  <!-- About Careers -->
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>हमारे साथ क्यों जुड़ें?</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      हम समाज सशक्तिकरण एवं जागरूकता के लिए समर्पित हैं।
-      यदि आप समाज सेवा के प्रति उत्साही हैं,
-      तो सबका विकास ज्यति आपके लिए सही स्थान है।
-    </ion-card-content>
-  </ion-card>
-
-  <!-- Job Openings -->
-  <ion-list>
-    <ion-item lines="none">
-      <ion-label style="font-size:18px; font-weight:600;">वर्तमान रिक्तियाँ</ion-label>
-    </ion-item>
-    <ion-card *ngFor="let job of jobs">
-      <ion-card-header>
-        <ion-card-title>{{ job.title }}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p><strong>स्थान:</strong> {{ job.location }}</p>
-        <p><strong>अनुभव:</strong> {{ job.experience }}</p>
-        <p><strong>रोज़गार प्रकार:</strong> {{ job.type }}</p>
-        <ion-button expand="block" color="primary" (click)="apply(job)">आवेदन करें</ion-button>
-      </ion-card-content>
-    </ion-card>
-  </ion-list>
-
-  <!-- Volunteer Section -->
-  <ion-card class="volunteer-card">
-    <ion-card-header>
-      <ion-card-title>स्वयंसेवक बनें</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      अल्पकालिक या दीर्घकालिक स्वयंसेवा से सहयोग कर सकते हैं।
-      मिलकर हम समाज में बदलाव ला सकते हैं।
-      <ion-button expand="block" (click)="openVolunteer()">स्वयंसेवक के रूप में जुड़ें</ion-button>
-    </ion-card-content>
-  </ion-card>
-
-  <!-- HR Details -->
-  <ion-card color="light">
-    <ion-card-header>
-      <ion-card-title>HR संपर्क</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p><strong>ईमेल:</strong> {{ hrEmail }}</p>
-      <p><strong>फ़ोन:</strong> {{ hrPhone }}</p>
-      <p><strong>पता:</strong> {{ hrAddress }}</p>
-    </ion-card-content>
-  </ion-card>
-
-
-  <ion-card class="footer-card">
-    <ion-card-content>
-      <div class="footer-container">
-
-        <!-- About -->
-        <div class="footer-section footer-about">
-          <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="footer-logo" />
-          <h3>सबका विकास ज्यति</h3>
-          <p>
-            गाँव गाँव खुशी, देश खुशहाल।
-            हमारा उद्देश्य — समाज के हर वर्ग को शिक्षा, स्वास्थ्य, रोजगार और विकास के अवसर प्रदान करना।
-          </p>
-          <div class="social-icons">
-            <a><ion-icon name="logo-facebook"></ion-icon></a>
-            <a><ion-icon name="logo-instagram"></ion-icon></a>
-            <a><ion-icon name="logo-youtube"></ion-icon></a>
+  <div class="main-container">
+    <!-- Why Join Us -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="section-title">
+            <h2>हमारे साथ क्यों जुड़ें?</h2>
+            <div class="underline"></div>
           </div>
-        </div>
+          <p class="section-desc">
+            हम समाज सशक्तिकरण एवं जागरूकता के लिए समर्पित हैं। यदि आप समाज सेवा के प्रति उत्साही हैं, तो हमारे परिवार का हिस्सा बनें।
+          </p>
+        </ion-col>
+      </ion-row>
 
-        <!-- Links -->
-        <div class="footer-section footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a routerLink="/home">🏠 Home</a></li>
-            <li><a routerLink="/about">ℹ️ About</a></li>
-            <li><a routerLink="/program">🎯 Program</a></li>
-            <li><a routerLink="/career">👥 Career</a></li>
-            <li><a routerLink="/donate">❤️ Donate</a></li>
-            <li><a routerLink="/download">⬇️ Download</a></li>
-          </ul>
-        </div>
+      <!-- Job Openings Grid -->
+      <ion-row id="job-section">
+        <ion-col size="12">
+          <h3 class="sub-heading">वर्तमान रिक्तियाँ</h3>
+        </ion-col>
+        
+        <ion-col size-xs="12" size-md="6" *ngFor="let job of jobs">
+          <ion-card class="job-card">
+            <ion-card-header>
+              <ion-badge color="primary" mode="ios">{{ job.type }}</ion-badge>
+              <ion-card-title>{{ job.title }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="job-info">
+                <p><ion-icon name="location-outline"></ion-icon> {{ job.location }}</p>
+                <p><ion-icon name="briefcase-outline"></ion-icon> {{ job.experience }}</p>
+              </div>
+              <ion-button expand="block" fill="outline" class="apply-btn" (click)="apply(job)">
+                आवेदन करें
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
 
-        <!-- Contact -->
-        <div class="footer-section footer-contact">
-          <h4>Contact Us</h4>
-          <p><ion-icon name="call-outline"></ion-icon> <a href="tel:01169290807">01169290807,7209985021</a></p>
-          <p><ion-icon name="mail-outline"></ion-icon> info@sabkavikasjayti.org</p>
-          <p><ion-icon name="location-outline"></ion-icon> Patna, Bihar, India</p>
-        </div>
-
-      </div>
-
-      <hr />
-
-      <!-- Bottom Strip -->
-      <p class="footer-bottom">© 2025 सबका विकास ज्यति. All Rights Reserved.</p>
-    </ion-card-content>
-  </ion-card>
+      <!-- Volunteer & HR Section -->
+      <ion-row class="ion-margin-top">
+        <ion-col size-xs="12" size-md="6">
+          <div class="volunteer-box">
+            <h3>स्वयंसेवक बनें</h3>
+            <p>समय दें, बदलाव लाएं। मिलकर हम बेहतर कल बना सकते हैं।</p>
+            <ion-button expand="block" color="secondary" (click)="openVolunteer()">जुड़ें</ion-button>
+          </div>
+        </ion-col>
+        
+        <ion-col size-xs="12" size-md="6">
+          <div class="hr-box">
+            <h3>HR संपर्क</h3>
+            <p><ion-icon name="mail-outline"></ion-icon> {{ hrEmail }}</p>
+            <p><ion-icon name="call-outline"></ion-icon> {{ hrPhone }}</p>
+            <p><ion-icon name="pin-outline"></ion-icon> {{ hrAddress }}</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <app-footer></app-footer>
 </ion-content>

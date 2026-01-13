@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { SHARED_IONIC_MODULES } from 'src/app/shared/shared.ionic';
 import { HeaderComponent } from 'src/app/components/header/header.component';
+import { FooterComponent } from 'src/app/components/footer/footer/footer.component';
 
 @Component({
   selector: 'app-program',
   templateUrl: './program.page.html',
   styleUrls: ['./program.page.scss'],
   standalone: true,
-  imports: [...SHARED_IONIC_MODULES, HeaderComponent]
+  imports: [...SHARED_IONIC_MODULES, HeaderComponent,FooterComponent]
 })
 export class ProgramPage implements OnInit {
   programs = [

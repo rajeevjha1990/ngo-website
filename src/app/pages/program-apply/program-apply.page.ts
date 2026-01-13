@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AlertController, NavController } from '@ionic/angular';
+import { FooterComponent } from 'src/app/components/footer/footer/footer.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { SHARED_IONIC_MODULES } from 'src/app/shared/shared.ionic';
 
@@ -8,7 +9,7 @@ import { SHARED_IONIC_MODULES } from 'src/app/shared/shared.ionic';
   selector: 'app-program-apply',
   templateUrl: './program-apply.page.html',
   styleUrls: ['./program-apply.page.scss'],
-    imports: [...SHARED_IONIC_MODULES, HeaderComponent],
+    imports: [...SHARED_IONIC_MODULES, HeaderComponent,FooterComponent],
   
 })
 export class ProgramApplyPage implements OnInit {

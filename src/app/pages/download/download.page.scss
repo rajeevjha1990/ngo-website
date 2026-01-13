@@ -1,0 +1,80 @@
+$primary-blue: #1a4f8b;
+$accent-gold: #ffce00;
+
+.download-hero {
+  background: linear-gradient(135deg, $primary-blue 0%, #103158 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 40px 40px;
+
+  .hero-icon { font-size: 60px; color: $accent-gold; margin-bottom: 15px; }
+  h1 { font-size: 2.2rem; font-weight: 800; margin: 0; }
+  p { font-size: 1rem; opacity: 0.8; margin-top: 10px; max-width: 600px; margin-inline: auto; }
+}
+
+.container { padding: 30px 15px; max-width: 1000px; margin: 0 auto; }
+
+.category-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $primary-blue;
+  margin: 30px 10px 15px;
+  border-left: 4px solid $accent-gold;
+  padding-left: 12px;
+}
+
+.file-card {
+  margin: 8px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #f0f0f0;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border-color: $primary-blue;
+  }
+
+  .file-info-flex {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .format-badge {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    
+    &.pdf { background: #fee2e2; color: #dc2626; } // Red for PDF
+    &.docx { background: #e0f2fe; color: #0284c7; } // Blue for Docs
+  }
+
+  .text-info {
+    flex-grow: 1;
+    h3 { margin: 0; font-size: 1rem; font-weight: 700; color: #333; }
+    p { margin: 3px 0 0; font-size: 0.8rem; color: #777; }
+  }
+}
+
+.transparency-card {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+  border: 1px dashed #cbd5e1;
+
+  ion-icon { font-size: 30px; flex-shrink: 0; }
+  p { margin: 0; font-size: 0.9rem; color: #475569; line-height: 1.5; }
+}

@@ -1,257 +1,134 @@
-/* ===============================
-   HEADER BASE
-================================ */
-.custom-header {
-    --min-height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-    background-color: ghostwhite;
-    border-bottom: 1px solid #e0e0e0;
-}
+/* --- प्रोफेशनल 2026 हेडर स्टाइल --- */
 
-ion-toolbar.custom-header {
-    --background: ghostwhite !important;
-}
-
-/* ===============================
-   LEFT SECTION
-================================ */
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: nowrap;
-}
-
-ion-menu-button {
-    display: none;
-}
-
-/* Logo */
-.logo {
-    height: 75px;
-    width: auto;
-}
-
-/* Title */
-.title-wrapper {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.15;
-}
-
-.app-title {
-    font-size: 52px;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.purple {
-    color: #6a1b9a;
-}
-
-.green {
-    color: #2e7d32;
-}
-
-.app-slogan {
-    font-size: 16px;
-    font-weight: 600;
-    color: #2e7d32;
-    text-align: center;
-    margin-top: 4px;
-}
-
-/* ===============================
-   RIGHT SECTION
-================================ */
-.header-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-}
-
-/* ===============================
-   TOP CONTACT BAR
-================================ */
+// डेस्कटॉप कांटेक्ट बार
 .top-contact-bar {
+  background: #2e7d32;
+  color: white;
+  padding: 8px 30px;
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-end;
+
+  .contact-content {
     display: flex;
-    align-items: center;
-    gap: 16px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #444;
+    gap: 25px;
+    span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+  }
 }
 
-.top-contact-bar span {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+.main-header-toolbar {
+  --background: #ffffff;
+  --min-height: 90px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
 }
 
-.top-contact-bar ion-icon {
-    font-size: 15px;
-    color: #2e7d32;
+/* लोगो और ब्रांडिंग */
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 0;
 }
 
-/* ===============================
-   MENU LINKS
-================================ */
-.menu-links {
-    display: flex;
-    align-items: center;
-    gap: 14px;
+.header-logo {
+  height: 70px;
+  width: auto;
 }
 
-/* Normal menu links */
-.menu-links a,
-.menu-dropdown .dropdown-toggle {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    border-radius: 8px;
+.main-app-title {
+  font-size: 32px; /* प्रोफेशनल साइज */
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+}
+
+.purple { color: #6a1b9a; }
+.green { color: #2e7d32; }
+
+.app-slogan-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2e7d32;
+  margin: 4px 0 0 0;
+  letter-spacing: 0.5px;
+}
+
+/* डेस्कटॉप नेविगेशन (यह हिस्सा डेस्कटॉप पर दिखेगा) */
+.desktop-navigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.links-wrapper {
+  display: flex;
+  gap: 20px;
+
+  a, .program-dropdown {
     text-decoration: none;
     color: #333;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.25s ease, color 0.25s ease;
-}
+    transition: 0.3s ease;
+    padding: 10px 5px;
 
-.menu-links a:hover,
-.menu-dropdown:hover .dropdown-toggle {
-    background-color: #C5D89D;
-    /* hover background */
-    color: #fff;
-    /* optional: text color on hover */
-}
-
-.menu-links ion-icon {
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.menu-links a:hover ion-icon {
-    transform: scale(1.15);
-}
-
-/* ===============================
-   PROGRAM DROPDOWN
-================================ */
-.menu-dropdown {
-    position: relative;
-}
-
-/* Arrow */
-.menu-dropdown .arrow {
-    font-size: 14px;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* Rotate arrow on hover */
-.menu-dropdown:hover .arrow {
-    transform: rotate(180deg);
-    color: #fff;
-    /* optional: arrow color on hover */
-}
-
-/* Submenu box */
-.submenu {
-    position: absolute;
-    top: 110%;
-    right: 0;
-    min-width: 210px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    padding: 6px 0;
-    display: none;
-    z-index: 999;
-}
-
-/* Show submenu on hover */
-.menu-dropdown:hover .submenu {
-    display: block;
-}
-
-/* Submenu items */
-.submenu a {
-    display: block;
-    padding: 10px 16px;
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s ease, color 0.2s ease;
-}
-
-.submenu a:hover {
-    background-color: rgba(106, 27, 154, 0.15);
-    color: #6a1b9a;
-}
-
-/* ===============================
-   ICON COLORS
-================================ */
-.menu-links a:nth-child(1) ion-icon {
-    color: #007bff;
-}
-
-.menu-links a:nth-child(2) ion-icon {
-    color: #17a2b8;
-}
-
-.menu-links a:nth-child(3) ion-icon {
-    color: #dc3545;
-}
-
-.menu-links a:nth-child(4) ion-icon {
-    color: #28a745;
-}
-
-.menu-links a:nth-child(6) ion-icon {
-    color: #6f42c1;
-}
-
-.menu-links .menu-btn:hover,
-.menu-links .menu-btn.active {
-    background-color: #C5D89D;
-    /* same as other menus */
-    color: #fff;
-    /* optional: text color change */
-}
-
-/* Icon scale for hover or active */
-.menu-links .menu-btn:hover ion-icon,
-.menu-links .menu-btn.active ion-icon {
-    transform: scale(1.15);
-    color: #fff;
-    /* optional: icon color change */
-}
-
-/* ===============================
-   MOBILE RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-
-    .header-right {
-        display: none;
+    &:hover, &.active-link {
+      color: #6a1b9a;
+      border-bottom: 3px solid #6a1b9a;
     }
+  }
+}
 
-    ion-menu-button {
-        display: block !important;
-    }
+.donate-button-nav {
+  --border-radius: 50px;
+  --box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
+  font-weight: 700;
+  height: 45px;
+}
 
-    .logo {
-        height: 36px;
-    }
+/* --- RESPONSIVE LOGIC --- */
 
-    .app-title {
-        font-size: 22px;
-    }
+/* मोबाइल पर: डेस्कटॉप मेनू छुपाएं और हैमबर्गर दिखाएं */
+@media (max-width: 991px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
 
-    .app-slogan {
-        font-size: 11px;
-    }
+  .show-on-mobile {
+    display: block !important;
+  }
+
+  .main-header-toolbar {
+    --min-height: 70px;
+  }
+
+  .header-logo {
+    height: 45px;
+  }
+
+  .main-app-title {
+    font-size: 20px;
+  }
+
+  .app-slogan-text {
+    font-size: 10px;
+  }
+}
+
+/* डेस्कटॉप पर: हैमबर्गर छुपाएं और मेनू लिंक्स दिखाएं */
+@media (min-width: 992px) {
+  .show-on-mobile {
+    display: none !important;
+  }
+  
+  .hide-on-mobile {
+    display: flex !important;
+  }
 }

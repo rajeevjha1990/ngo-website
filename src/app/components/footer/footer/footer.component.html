@@ -1,31 +1,63 @@
-<ion-footer class="footer">
-  <div class="footer-content">
-    <div class="footer-left">
-      <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="footer-logo" />
-      <div>
-        <h3 class="footer-title">सबका विकास ज्यति</h3>
-        <p class="footer-slogan">गाँव गाँव खुशी, देश खुशहाल</p>
-      </div>
-    </div>
+<footer class="modern-footer">
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 320"><path fill="#1a1a1a" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,213.3C960,224,1056,192,1152,165.3C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+  </div>
 
-    <div class="footer-links">
-      <a routerLink="/home">Home</a>
-      <a routerLink="/about">About</a>
-      <a routerLink="/donate">Donate</a>
-      <a routerLink="/project">Program</a>
-      <a routerLink="/career">Career</a>
-      <a routerLink="/download">Download</a>
-    </div>
+  <div class="footer-content ion-padding">
+    <ion-grid>
+      <ion-row>
+        <!-- Brand Section -->
+        <ion-col size="12" size-md="4" class="footer-brand">
+          <img src="assets/SVJ-Images/logo.png" alt="SVJ Logo" class="f-logo" />
+          <h2 class="f-title">सबका विकास ज्यति</h2>
+          <p class="f-desc">
+            गाँव गाँव खुशी, देश खुशहाल। हम समाज के हर वर्ग को शिक्षा, स्वास्थ्य और विकास के अवसर प्रदान करने के लिए प्रतिबद्ध हैं।
+          </p>
+          <div class="f-social">
+            <!-- यहाँ वास्तविक लिंक्स दिए गए हैं -->
+            <a href="https://www.facebook.com/sabkavikasjayti" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/sabkavikas_jayti/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#" target="_blank"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="#" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </div>
+        </ion-col>
 
-    <div class="footer-social">
-      <ion-icon name="logo-facebook"></ion-icon>
-      <ion-icon name="logo-instagram"></ion-icon>
-      <ion-icon name="logo-twitter"></ion-icon>
-      <ion-icon name="logo-youtube"></ion-icon>
-    </div>
+        <!-- Links Section -->
+        <ion-col size="6" size-md="4" class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a routerLink="/home"><ion-icon name="chevron-forward"></ion-icon> Home</a></li>
+            <li><a routerLink="/about"><ion-icon name="chevron-forward"></ion-icon> About Us</a></li>
+            <li><a routerLink="/program"><ion-icon name="chevron-forward"></ion-icon> Our Programs</a></li>
+            <li><a routerLink="/donate"><ion-icon name="chevron-forward"></ion-icon> Donate Now</a></li>
+            <li><a routerLink="/career"><ion-icon name="chevron-forward"></ion-icon> Join as Volunteer</a></li>
+          </ul>
+        </ion-col>
+
+        <!-- Contact Section -->
+        <ion-col size="12" size-md="4" class="footer-contact">
+          <h3>Contact Details</h3>
+          <div class="c-item">
+            <ion-icon name="location-sharp"></ion-icon>
+            <p>Patna, Bihar, India</p>
+          </div>
+          <div class="c-item">
+            <ion-icon name="call-sharp"></ion-icon>
+            <p>011-69290807, 7209985021</p>
+          </div>
+          <div class="c-item">
+            <ion-icon name="mail-sharp"></ion-icon>
+            <p>info@sabkavikasjayti.org</p>
+          </div>
+          <div class="reg-box">
+            <small>Reg. No: Act 21/1860 (S-000216)</small>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 
   <div class="footer-bottom">
-    <p>© 2025 Sabka Vikas Jyoti. All Rights Reserved.</p>
+    <p>© 2026 सबका विकास ज्यति | Designed for Impact</p>
   </div>
-</ion-footer>
+</footer>

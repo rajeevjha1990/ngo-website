@@ -1,83 +1,118 @@
-.about-page {
-    --background: #f9fafc;
-    color: #222;
+$primary-blue: #1a4f8b;
+$accent-gold: #5ce463;
+$dark-grey: #2d3436;
+
+
+.about-hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+              url('/assets/SVJ-Images/ngo-mission.jpg') center/cover;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 40px 40px;
+  h1 { font-size: 2.8rem; font-weight: 800; }
+  p { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1.5px; color: $accent-gold; }
 }
 
-/* 🌅 Hero Section */
-.hero-section {
-    position: relative;
-    height: 75px;
-    background: url('/assets/SVJ-Images/slide1.jpg') center/cover no-repeat;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
+.container { padding: 40px 15px; max-width: 1100px; margin: 0 auto; }
+
+.section-title { font-weight: 800; color: $primary-blue; font-size: 2rem; margin-bottom: 0; }
+.underline { width: 60px; height: 4px; background: $accent-gold; margin: 15px 0 25px; border-radius: 5px; }
+
+.highlight-quote {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #444;
+  border-left: 4px solid $accent-gold;
+  padding-left: 20px;
+  line-height: 1.5;
+  margin: 25px 0;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 12px;
+.desc-text { color: #555; line-height: 1.8; font-size: 1.05rem; }
+
+.reg-box {
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px dashed $primary-blue;
+  ion-icon { font-size: 50px; color: $primary-blue; margin-bottom: 10px; }
+  h4 { color: $primary-blue; font-weight: 700; }
 }
 
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-
-    h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
+// Mission & Vision Cards
+.mission-vision-wrapper {
+  margin: 50px 0;
+  .mv-card {
+    padding: 35px;
+    border-radius: 25px;
+    height: 100%;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    .card-head {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+      ion-icon { font-size: 35px; color: $accent-gold; }
+      h3 { margin: 0; font-weight: 700; font-size: 1.3rem; }
     }
+    p { opacity: 0.9; line-height: 1.7; font-size: 0.98rem; }
+  }
+  .mission { background: $primary-blue; }
+  .vision { background: $dark-grey; }
+}
 
-    p {
-        font-size: 1.2rem;
-        font-weight: 500;
+// Bihar Impact Card
+.bihar-impact-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+  border-radius: 25px;
+  padding: 40px;
+  margin: 60px 0;
+  border: 1px solid #e0e6ed;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+
+  .impact-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    ion-icon { font-size: 30px; color: #e74c3c; }
+    h3 { margin: 0; font-weight: 800; color: $primary-blue; font-size: 1.5rem; }
+  }
+  
+  p { color: #444; font-size: 1.1rem; line-height: 1.7; }
+  
+  .district-tags {
+    margin-top: 20px;
+    span {
+      background: $primary-blue;
+      color: white;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-right: 10px;
+      display: inline-block;
     }
+  }
 }
 
-/* 🏛️ About Section */
-.about-card {
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    padding: 1rem;
-    line-height: 1.7;
+// Focus Boxes
+.focus-box {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  height: 100%;
+  border: 1px solid #f0f0f0;
+  transition: 0.3s;
+  &:hover { transform: translateY(-5px); border-color: $accent-gold; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+  ion-icon { font-size: 35px; color: $primary-blue; margin-bottom: 12px; }
+  h4 { font-size: 0.95rem; font-weight: 700; color: #333; margin: 0; }
 }
 
-.about-card h2 {
-    text-align: center;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-.about-card p {
-    text-align: justify;
-    font-size: 1rem;
-    color: #444;
-}
-
-.about-card strong {
-    color: #007bff;
-    font-weight: 600;
-}
-
-/* 🎯 Mission */
-.mission-card strong {
-    margin-top: 2rem;
-    color: #007bff;
-}
-
-.vision-card {
-    margin-top: 2rem;
-    color: #007bff;
-}
-
-.program-icon {
-    font-size: 36px;
-    color: var(--ion-color-primary);
-}
+.section-header { text-align: center; margin-bottom: 40px; h2 { font-weight: 800; color: $primary-blue; } }

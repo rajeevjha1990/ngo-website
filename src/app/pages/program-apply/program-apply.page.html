@@ -1,151 +1,106 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <app-header></app-header>
 </ion-header>
 
-<ion-content class="ion-padding">
-
-<ion-content class="ion-padding">
-
-  <!-- Program Info Card -->
-  <ion-card *ngIf="program" style="text-align: center;" class="programcard">
-    <ion-card-header>
-      <ion-card-title>{{ program.name }}</ion-card-title>
-      <ion-card-subtitle>{{ program.short_desc }}</ion-card-subtitle>
-    </ion-card-header>
-  </ion-card>
-
-  <!-- Hidden Program ID -->
-  <input type="hidden" [(ngModel)]="formData.program_id">
-
-  <!-- ========== PROGRAM 1: SHG ========== -->
-  <div *ngIf="programId === 1">
-    <ion-card class="programcard">
-      <ion-card-header>
-        <ion-card-title>स्वयं सहायता समूह फॉर्म</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-    <ion-grid>
-      <ion-row>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Name" labelPlacement="floating" [(ngModel)]="formData.name"></ion-input>
-        </ion-col>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Mobile" labelPlacement="floating" [(ngModel)]="formData.mobile"></ion-input>
-        </ion-col>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Pincode" labelPlacement="floating" [(ngModel)]="formData.pincode"></ion-input>
-        </ion-col>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Address" labelPlacement="floating" [(ngModel)]="formData.address"></ion-input>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    </ion-card-content>
-    </ion-card>
+<ion-content [fullscreen]="true" class="home-page">
+  <!-- NGO Official Header Strip -->
+  <div class="ngo-official-top">
+    <div class="ngo-flex-info">
+      <img src="/assets/SVJ-Images/logo.png" alt="SVJ Logo" class="mini-logo">
+      <span>पंजीकृत सामाजिक संस्था | सबका विकास ज्यति</span>
+    </div>
   </div>
 
-  <!-- ========== PROGRAM 2: PAD ========== -->
-  <div *ngIf="programId === 2">
-    <ion-card class="programcard">
-      <ion-card-header>
-        <ion-card-title>सेनेटरी पैड योजना फॉर्म</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-    <ion-grid>
-      <ion-row>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Name" labelPlacement="floating" [(ngModel)]="formData.name"></ion-input>
-        </ion-col>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Mobile" labelPlacement="floating" [(ngModel)]="formData.mobile"></ion-input>
-        </ion-col>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Pincode" labelPlacement="floating" [(ngModel)]="formData.pincode"></ion-input>
-        </ion-col>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Address" labelPlacement="floating" [(ngModel)]="formData.address"></ion-input>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    </ion-card-content>
-    </ion-card>
+  <!-- Hero Section with Program Branding -->
+  <div class="program-hero">
+    <div class="overlay">
+      <ion-chip color="light" mode="ios">
+        <ion-icon name="ribbon-outline"></ion-icon>
+        <ion-label>जन-कल्याण पहल</ion-label>
+      </ion-chip>
+      <h1 *ngIf="program">{{ program.name }}</h1>
+      <p>आपका सहयोग, समाज की प्रगति।</p>
+    </div>
   </div>
 
-  <!-- ========== PROGRAM 3: VERMI ========== -->
-  <div *ngIf="programId === 3">
-<ion-card class="programcard">
-      <ion-card-header>
-        <ion-card-title>बर्मी कम्पोस्ट जागरूकता अभियान फॉर्म</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-    <ion-grid>
-      <ion-row>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Name" labelPlacement="floating" [(ngModel)]="formData.name"></ion-input>
-        </ion-col>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Mobile" labelPlacement="floating" [(ngModel)]="formData.mobile"></ion-input>
-        </ion-col>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Pincode" labelPlacement="floating" [(ngModel)]="formData.pincode"></ion-input>
-        </ion-col>
-        <ion-col size-md="3" size="12">
-          <ion-input fill="outline" label="Address" labelPlacement="floating" [(ngModel)]="formData.address"></ion-input>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    </ion-card-content>
-    </ion-card>
-  </div>
-   <ion-button expand="block" color="success" class="ion-margin-top" (click)="proceedToPayment()">
-    Proceed to Payment
-  </ion-button>
-  
-  <ion-card class="footer-card">
-    <ion-card-content>
-      <div class="footer-container">
+  <div class="form-wrapper">
+    <!-- Short NGO Note -->
+    <div class="ngo-mission-note">
+      <ion-icon name="heart-half-outline"></ion-icon>
+      <p>हमारा उद्देश्य समाज के हर वर्ग को सशक्त बनाना है। इस कार्यक्रम के माध्यम से जुड़कर आप स्वयं के साथ-साथ समाज के विकास में भी भागीदार बन रहे हैं।</p>
+    </div>
 
-        <!-- About -->
-        <div class="footer-section footer-about">
-          <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="footer-logo" />
-          <h3>सबका विकास ज्यति</h3>
-          <p>
-            गाँव गाँव खुशी, देश खुशहाल।
-            हमारा उद्देश्य — समाज के हर वर्ग को शिक्षा, स्वास्थ्य, रोजगार और विकास के अवसर प्रदान करना।
-          </p>
-          <div class="social-icons">
-            <a><ion-icon name="logo-facebook"></ion-icon></a>
-            <a><ion-icon name="logo-instagram"></ion-icon></a>
-            <a><ion-icon name="logo-youtube"></ion-icon></a>
+    <!-- The Form Card -->
+    <ion-card class="application-form-card">
+      <div class="form-header">
+        <h2>आवेदन पत्र (Application Form)</h2>
+        <p>कृपया अपनी जानकारी सही-सही भरें</p>
+      </div>
+
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12" size-md="6">
+              <div class="input-group">
+                <ion-label>आवेदक का नाम (Applicant Name)</ion-label>
+                <ion-item lines="none" class="custom-item">
+                  <ion-icon name="person-outline" slot="start"></ion-icon>
+                  <ion-input [(ngModel)]="formData.name" placeholder="नाम दर्ज करें"></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+
+            <ion-col size="12" size-md="6">
+              <div class="input-group">
+                <ion-label>संपर्क नंबर (Mobile Number)</ion-label>
+                <ion-item lines="none" class="custom-item">
+                  <ion-icon name="call-outline" slot="start"></ion-icon>
+                  <ion-input type="tel" [(ngModel)]="formData.mobile" placeholder="मोबाइल नंबर दर्ज करें"></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+
+            <ion-col size="12" size-md="6">
+              <div class="input-group">
+                <ion-label>पिनकोड (Pincode)</ion-label>
+                <ion-item lines="none" class="custom-item">
+                  <ion-icon name="map-outline" slot="start"></ion-icon>
+                  <ion-input type="number" [(ngModel)]="formData.pincode" placeholder="पिनकोड लिखें"></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+
+            <ion-col size="12" size-md="6">
+              <div class="input-group">
+                <ion-label>पता (Complete Address)</ion-label>
+                <ion-item lines="none" class="custom-item">
+                  <ion-icon name="location-outline" slot="start"></ion-icon>
+                  <ion-input [(ngModel)]="formData.address" placeholder="गाँव/ब्लॉक/जिला"></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <!-- Trust Badge Row -->
+        <div class="trust-badge">
+          <div class="badge-item">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <span>सुरक्षित भुगतान</span>
+          </div>
+          <div class="badge-item">
+            <ion-icon name="document-text-outline"></ion-icon>
+            <span>पारदर्शी प्रक्रिया</span>
           </div>
         </div>
 
-        <!-- Links -->
-        <div class="footer-section footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a routerLink="/home">🏠 Home</a></li>
-            <li><a routerLink="/about">ℹ️ About</a></li>
-            <li><a routerLink="/program">🎯 Program</a></li>
-            <li><a routerLink="/career">👥 Career</a></li>
-            <li><a routerLink="/donate">❤️ Donate</a></li>
-            <li><a routerLink="/download">⬇️ Download</a></li>
-          </ul>
-        </div>
+        <ion-button expand="block" class="submit-btn" (click)="proceedToPayment()">
+          पंजीकरण शुल्क जमा करें <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
-        <!-- Contact -->
-        <div class="footer-section footer-contact">
-          <h4>Contact Us</h4>
-          <p><ion-icon name="call-outline"></ion-icon> <a href="tel:01169290807">01169290807,7209985021</a></p>
-          <p><ion-icon name="mail-outline"></ion-icon> info@sabkavikasjayti.org</p>
-          <p><ion-icon name="location-outline"></ion-icon> Patna, Bihar, India</p>
-        </div>
-
-      </div>
-
-      <hr />
-      <p class="footer-bottom">© 2025 सबका विकास ज्यति. All Rights Reserved.</p>
-    </ion-card-content>
-  </ion-card>
-
+  <!-- Footer -->
+<app-footer></app-footer>
 </ion-content>
