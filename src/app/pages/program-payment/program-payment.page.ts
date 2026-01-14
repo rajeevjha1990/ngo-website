@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController,  NavController } from '@ionic/angular';
+import { IonListHeader } from '@ionic/angular/standalone';
+import { IonSpinner } from '@ionic/angular/standalone';
+
+import { FooterComponent } from 'src/app/components/footer/footer/footer.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
 import { PubService } from 'src/app/services/pub/pub.service';
 import { SHARED_IONIC_MODULES } from 'src/app/shared/shared.ionic';
@@ -9,7 +13,7 @@ import { SHARED_IONIC_MODULES } from 'src/app/shared/shared.ionic';
   selector: 'app-program-payment',
   templateUrl: './program-payment.page.html',
   styleUrls: ['./program-payment.page.scss'],
-    imports: [...SHARED_IONIC_MODULES, HeaderComponent],
+    imports: [...SHARED_IONIC_MODULES, HeaderComponent,FooterComponent,IonListHeader,IonSpinner],
   
 })
 export class ProgramPaymentPage implements OnInit {

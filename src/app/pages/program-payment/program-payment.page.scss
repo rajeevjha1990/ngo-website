@@ -1,0 +1,59 @@
+
+.home-page {
+  // Adds a nice background color to the content area
+  --ion-background-color: #f4f4f4;
+}
+
+ion-card {
+  // Makes the card look a bit modern with a slight shadow
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 500px; // Optional: keeps the card centered on very large screens
+  margin: 20px auto;
+}
+
+.details-section {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--ion-color-step-150, #d7d8da);
+
+  p {
+    margin: 5px 0;
+    color: var(--ion-color-medium);
+  }
+}
+
+.amount-section {
+  padding: 15px 0;
+
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  p {
+    margin: 0;
+    color: var(--ion-color-medium);
+  }
+}
+
+ion-radio-group {
+  margin-top: 15px;
+}
+
+ion-item {
+  // Makes the radio items look clean and consistent
+  --inner-border-width: 0;
+  --border-radius: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+ion-button {
+  margin-top: 25px;
+}
+
+// Ensure icons are nicely spaced
+ion-icon[slot="start"] {
+  margin-inline-end: 12px;
+}
+

@@ -1,45 +1,75 @@
 <ion-header>
+  <!-- Make sure you have the app-header component defined elsewhere -->
+
   <app-header></app-header>
 </ion-header>
 
-<ion-content class="ion-padding">
+<ion-content class="ion-padding home-page">
 
+  <!-- Added a conditional check if applyData exists -->
   <ion-card *ngIf="applyData">
     <ion-card-header>
       <ion-card-title>Confirm Your Order</ion-card-title>
+      <ion-card-subtitle>Please review your details before placing the order.</ion-card-subtitle>
     </ion-card-header>
+
     <ion-card-content>
 
-      <p><b>Name:</b> {{ applyData.name }}</p>
-      <p><b>Mobile:</b> {{ applyData.mobile }}</p>
-      <p><b>Address:</b> {{ applyData.address }}</p>
+      <!-- Customer Details Section -->
+      <div class="details-section">
+        <p><b>Name:</b> {{ applyData.name }}</p>
+        <p><b>Mobile:</b> {{ applyData.mobile }}</p>
+        <p><b>Address:</b> {{ applyData.address }}</p>
+      </div>
 
-      <h2 style="color:green;">Amount: ₹{{ MIN_AMOUNT }}</h2>
+      <!-- Amount Section (Centered and Highlighted) -->
+      <div class="amount-section ion-text-center">
+        <p>Total Payable Amount</p>
+        <h1 class="ion-text-success">₹{{ MIN_AMOUNT }}</h1>
+      </div>
 
+      <!-- Payment Mode Selection -->
       <ion-radio-group [(ngModel)]="payment_mode">
 
+        <ion-list-header>
+          <ion-label>Select Payment Mode</ion-label>
+        </ion-list-header>
+
+        <!-- Added Icons for better UI -->
         <ion-item>
-          <ion-radio value="COD"></ion-radio>
+          <ion-icon name="cash-outline" slot="start"></ion-icon>
           <ion-label>Cash on Delivery</ion-label>
+          <ion-radio value="COD"></ion-radio>
         </ion-item>
 
         <ion-item>
-          <ion-radio value="UPI"></ion-radio>
+          <ion-icon name="qr-code-outline" slot="start"></ion-icon>
           <ion-label>UPI / QR</ion-label>
+          <ion-radio value="UPI"></ion-radio>
         </ion-item>
 
         <ion-item>
-          <ion-radio value="ONLINE"></ion-radio>
+          <ion-icon name="card-outline" slot="start"></ion-icon>
           <ion-label>Debit / Credit Card</ion-label>
+          <ion-radio value="ONLINE"></ion-radio>
         </ion-item>
 
       </ion-radio-group>
 
-      <ion-button expand="block" color="success" (click)="confirmOrder()">
+      <!-- Confirmation Button (Disabled until a payment mode is selected) -->
+      <ion-button expand="block" color="success" (click)="confirmOrder()" [disabled]="!payment_mode">
+        <ion-icon name="checkmark-circle-outline" slot="start"></ion-icon>
         Confirm & Place Order
       </ion-button>
 
     </ion-card-content>
   </ion-card>
 
+  <!-- If no data is available -->
+  <div *ngIf="!applyData" class="ion-padding ion-text-center">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Loading order details...</p>
+  </div>
+
+<app-footer></app-footer>
 </ion-content>
