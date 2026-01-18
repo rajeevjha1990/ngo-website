@@ -2,21 +2,30 @@
   <!-- Top Info Bar (Desktop Only) -->
   <div class="top-contact-bar hide-on-mobile">
     <div class="contact-content">
-      <span><ion-icon name="mail-outline"></ion-icon> info@sabkavikasjayti.org</span>
-      <span><ion-icon name="call-outline"></ion-icon> 011-69290807, 7209985021</span>
+      <span
+        ><ion-icon name="mail-outline"></ion-icon>
+        info@sabkavikasjayti.org</span
+      >
+      <span
+        ><ion-icon name="call-outline"></ion-icon> 011-69290807,
+        7209985021</span
+      >
     </div>
   </div>
 
+  <!-- Main Header -->
   <ion-toolbar class="main-header-toolbar">
-    <!-- LEFT: Logo and Title -->
+    <!-- LEFT: Logo -->
     <ion-buttons slot="start">
       <ion-menu-button class="show-on-mobile"></ion-menu-button>
+
       <div class="logo-box">
         <img src="/assets/SVJ-Images/logo.png" alt="Logo" class="header-logo" />
         <div class="text-box">
           <h1 class="main-app-title">
             <span class="purple">सबका</span>
-            <span class="green"> वि</span><span class="purple">का</span><span class="green">स </span>
+            <span class="green"> वि</span><span class="purple">का</span
+            ><span class="green">स </span>
             <span class="purple">ज्यति</span>
           </h1>
           <p class="app-slogan-text">“गाँव गाँव खुशी, देश खुशहाल”</p>
@@ -24,21 +33,45 @@
       </div>
     </ion-buttons>
 
-    <!-- RIGHT: Menu Links (Visible on Desktop) -->
+    <!-- RIGHT: Desktop Menu -->
     <div slot="end" class="desktop-navigation hide-on-mobile">
       <nav class="links-wrapper">
         <a routerLink="/home" routerLinkActive="active-link">Home</a>
         <a routerLink="/about" routerLinkActive="active-link">About</a>
-        <!-- <a class="program-dropdown" (mouseenter)="openProgramMenu($event)">
+        <a routerLink="/program" routerLinkActive="active-link">
           Program <ion-icon name="chevron-down-outline"></ion-icon>
-        </a> -->
-       <a routerLink="/program" routerLinkActive="active-link">Program  <ion-icon name="chevron-down-outline"></ion-icon></a>
+        </a>
         <a routerLink="/career" routerLinkActive="active-link">Career</a>
         <a routerLink="/download" routerLinkActive="active-link">Download</a>
       </nav>
-      <ion-button routerLink="/donate" class="donate-button-nav" color="success">
+
+      <ion-button
+        routerLink="/donate"
+        class="donate-button-nav"
+        color="success"
+      >
         Donate Now ❤️
       </ion-button>
     </div>
   </ion-toolbar>
 </ion-header>
+
+<!-- Announcement / Greeting Bar -->
+<div class="announcement-bar">
+  <div class="ticker-wrap">
+    <div class="ticker-move">
+      <span *ngFor="let event of events" class="event-item">
+        <img
+          [src]="
+            event.event_icon
+              ? myhttp.UPLOADS + event.event_icon
+              : 'assets/SVJ-Images/images.png'
+          "
+          [alt]="event.event_name"
+          class="event-icon-img"
+        />
+        {{ event.event_name }} {{ event.event_date | date: "dd MMM yyyy" }}
+      </span>
+    </div>
+  </div>
+</div>

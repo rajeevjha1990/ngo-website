@@ -1,6 +1,4 @@
-/* --- प्रोफेशनल 2026 हेडर स्टाइल --- */
-
-// डेस्कटॉप कांटेक्ट बार
+/* --- Top Contact Bar --- */
 .top-contact-bar {
   background: #2e7d32;
   color: white;
@@ -12,6 +10,7 @@
   .contact-content {
     display: flex;
     gap: 25px;
+
     span {
       display: flex;
       align-items: center;
@@ -21,6 +20,7 @@
   }
 }
 
+/* --- Main Header --- */
 .main-header-toolbar {
   --background: #ffffff;
   --min-height: 90px;
@@ -28,20 +28,26 @@
   padding: 0 20px;
 }
 
-/* लोगो और ब्रांडिंग */
+/* Logo & Branding */
 .logo-box {
   display: flex;
   align-items: center;
+  gap: 15px;
   padding: 5px 0;
 }
 
 .header-logo {
   height: 70px;
-  width: auto;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .main-app-title {
-  font-size: 32px; /* प्रोफेशनल साइज */
+  font-size: 32px;
   font-weight: 800;
   margin: 0;
   line-height: 1;
@@ -50,6 +56,7 @@
 .purple {
   color: #6a1b9a;
 }
+
 .green {
   color: #2e7d32;
 }
@@ -59,17 +66,9 @@
   font-weight: 700;
   color: #2e7d32;
   margin: 0;
-  letter-spacing: 0.5px;
 }
 
-/* Text container with gap spacing */
-.text-box {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-/* डेस्कटॉप नेविगेशन (यह हिस्सा डेस्कटॉप पर दिखेगा) */
+/* Desktop Menu */
 .desktop-navigation {
   display: flex;
   align-items: center;
@@ -80,15 +79,13 @@
   display: flex;
   gap: 20px;
 
-  a,
-  .program-dropdown {
+  a {
     text-decoration: none;
     color: #333;
     font-weight: 600;
     font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s ease;
     padding: 10px 5px;
+    transition: 0.3s ease;
 
     &:hover,
     &.active-link {
@@ -105,9 +102,79 @@
   height: 45px;
 }
 
-/* --- RESPONSIVE LOGIC --- */
+/* --- Announcement Bar --- */
+.announcement-bar {
+  background: linear-gradient(90deg, #2e7d32, #6a1b9a);
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+}
 
-/* मोबाइल पर: डेस्कटॉप मेनू छुपाएं और हैमबर्गर दिखाएं */
+.announcement-bar {
+  background: linear-gradient(90deg, #2e7d32, #6a1b9a);
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-move {
+  display: inline-flex;
+  gap: 50px;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 14px;
+  animation: tickerScroll 5s linear infinite;
+}
+
+.ticker-move span {
+  display: inline-block;
+}
+
+.event-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.event-icon-img {
+  height: 24px;
+  width: 24px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.event-icon-text {
+  font-size: 16px;
+}
+
+/* Animation */
+@keyframes tickerScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile speed & size */
+@media (max-width: 768px) {
+  .ticker-move {
+    font-size: 12px;
+    animation-duration: 4s;
+    gap: 25px;
+  }
+}
+
+/* --- Responsive --- */
 @media (max-width: 991px) {
   .hide-on-mobile {
     display: none !important;
@@ -122,39 +189,20 @@
     padding: 0 10px;
   }
 
-  .logo-box {
-    // gap: 10px; // Removed gap between image and text
-  }
-
   .header-logo {
     height: 45px;
   }
 
   .main-app-title {
     font-size: 18px;
-    line-height: 1.1;
   }
 
   .app-slogan-text {
     font-size: 9px;
   }
-
-  .text-box {
-    gap: 2px;
-  }
 }
 
-/* Small mobile devices */
 @media (max-width: 480px) {
-  .main-header-toolbar {
-    --min-height: 65px;
-    padding: 0 8px;
-  }
-
-  .logo-box {
-    // gap: 8px; // Removed gap between image and text
-  }
-
   .header-logo {
     height: 40px;
   }
@@ -167,21 +215,17 @@
     font-size: 8px;
   }
 
-  .text-box {
-    gap: 2px;
+  .announcement-bar {
+    font-size: 12px;
+    padding: 8px 10px;
   }
 
-  .top-contact-bar {
-    padding: 6px 15px;
-    font-size: 11px;
-
-    .contact-content {
-      gap: 15px;
-    }
+  .announcement-content {
+    gap: 12px;
   }
 }
 
-/* डेस्कटॉप पर: हैमबर्गर छुपाएं और मेनू लिंक्स दिखाएं */
+/* Desktop Only */
 @media (min-width: 992px) {
   .show-on-mobile {
     display: none !important;
