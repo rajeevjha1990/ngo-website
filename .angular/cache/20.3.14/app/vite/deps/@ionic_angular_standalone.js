@@ -87,7 +87,7 @@ import {
   setIonicClasses,
   setOverlayId,
   toastController
-} from "./chunk-YHI6MNZ4.js";
+} from "./chunk-6TRID3IZ.js";
 import {
   shouldUseCloseWatcher
 } from "./chunk-K7UIJXCF.js";
@@ -160,15 +160,15 @@ import {
 import {
   ActivatedRoute,
   Router
-} from "./chunk-MKSX3HBR.js";
-import "./chunk-NXTRDU2D.js";
-import "./chunk-6LOFIR7Y.js";
+} from "./chunk-MDRNW5LP.js";
+import "./chunk-HQNTZGPG.js";
 import {
   CommonModule,
   Location,
   NgIf,
   NgTemplateOutlet
 } from "./chunk-6AIEO77A.js";
+import "./chunk-6LOFIR7Y.js";
 import "./chunk-R6U7IGMG.js";
 import {
   APP_INITIALIZER,

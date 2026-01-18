@@ -2,36 +2,25 @@
   <app-header></app-header>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="home-page">
-  <!-- Top Section -->
-  <div class="download-hero">
-    <div class="hero-content">
-      <ion-icon name="cloud-download-outline" class="hero-icon"></ion-icon>
-      <h1>दस्तावेज़ और संसाधन</h1>
-      <p>NGO की पारदर्शिता और जानकारी के लिए आवश्यक फाइलें यहाँ से डाउनलोड करें।</p>
-    </div>
-  </div>
-
+<ion-content>
   <div class="container">
-    <div *ngFor="let section of documents" class="download-section">
-      <h2 class="category-title">{{ section.category }}</h2>
-      
+    <div *ngFor="let section of documents">
+      <h2>{{ section.category }}</h2>
+
       <ion-grid>
         <ion-row>
-          <ion-col size-xs="12" size-md="6" *ngFor="let file of section.files">
-            <ion-card class="file-card" (click)="downloadFile(file)">
+          <ion-col size="12" size-md="6" *ngFor="let file of section.files">
+            <ion-card (click)="viewFile(file)">
               <ion-card-content>
-                <div class="file-info-flex">
-                  <div class="format-badge" [ngClass]="file.format.toLowerCase()">
-                    {{ file.format }}
-                  </div>
-                  <div class="text-info">
+                <div class="file-row">
+                  <img [src]="file.imageUrl" />
+
+                  <div>
                     <h3>{{ file.name }}</h3>
-                    <p>साइज़: {{ file.size }} | फॉर्मेट: {{ file.format }}</p>
+                    <p>{{ file.size }} | {{ file.format }}</p>
                   </div>
-                  <ion-button fill="clear" color="primary">
-                    <ion-icon slot="icon-only" name="download-outline"></ion-icon>
-                  </ion-button>
+
+                  <ion-icon name="eye-outline"></ion-icon>
                 </div>
               </ion-card-content>
             </ion-card>
@@ -39,13 +28,29 @@
         </ion-row>
       </ion-grid>
     </div>
-
-    <!-- Transparency Note -->
-    <div class="transparency-card">
-      <ion-icon name="shield-checkmark" color="success"></ion-icon>
-      <p>सबका विकास ज्यति पूर्ण पारदर्शिता में विश्वास रखती है। यदि आपको किसी अन्य दस्तावेज़ की आवश्यकता है, तो कृपया हमें ईमेल करें।</p>
-    </div>
   </div>
 
   <app-footer></app-footer>
 </ion-content>
+
+<!-- ✅ REAL IONIC MODAL IMAGE VIEWER -->
+<ion-modal [isOpen]="isViewerOpen" (didDismiss)="closeViewer()">
+  <ng-template>
+    <div class="document-viewer-overlay">
+      <div class="viewer-header">
+        <h3>{{ selectedDocName }}</h3>
+        <ion-button (click)="closeViewer()" fill="clear" color="light">
+          <ion-icon slot="icon-only" name="close"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div class="viewer-content">
+        <img
+          [src]="selectedImageUrl"
+          alt="{{ selectedDocName }}"
+          style="max-width: 100%; max-height: 100%; object-fit: contain"
+        />
+      </div>
+    </div>
+  </ng-template>
+</ion-modal>

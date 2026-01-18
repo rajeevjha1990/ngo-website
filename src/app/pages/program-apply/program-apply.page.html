@@ -2,11 +2,11 @@
   <app-header></app-header>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="home-page">
+<ion-content class="home-page">
   <!-- NGO Official Header Strip -->
   <div class="ngo-official-top">
     <div class="ngo-flex-info">
-      <img src="/assets/SVJ-Images/logo.png" alt="SVJ Logo" class="mini-logo">
+      <img src="/assets/SVJ-Images/logo.png" alt="SVJ Logo" class="mini-logo" />
       <span>पंजीकृत सामाजिक संस्था | सबका विकास ज्यति</span>
     </div>
   </div>
@@ -27,7 +27,10 @@
     <!-- Short NGO Note -->
     <div class="ngo-mission-note">
       <ion-icon name="heart-half-outline"></ion-icon>
-      <p>हमारा उद्देश्य समाज के हर वर्ग को सशक्त बनाना है। इस कार्यक्रम के माध्यम से जुड़कर आप स्वयं के साथ-साथ समाज के विकास में भी भागीदार बन रहे हैं।</p>
+      <p>
+        हमारा उद्देश्य समाज के हर वर्ग को सशक्त बनाना है। इस कार्यक्रम के माध्यम
+        से जुड़कर आप स्वयं के साथ-साथ समाज के विकास में भी भागीदार बन रहे हैं।
+      </p>
     </div>
 
     <!-- The Form Card -->
@@ -45,7 +48,10 @@
                 <ion-label>आवेदक का नाम (Applicant Name)</ion-label>
                 <ion-item lines="none" class="custom-item">
                   <ion-icon name="person-outline" slot="start"></ion-icon>
-                  <ion-input [(ngModel)]="formData.name" placeholder="नाम दर्ज करें"></ion-input>
+                  <ion-input
+                    [(ngModel)]="formData.name"
+                    placeholder="नाम दर्ज करें"
+                  ></ion-input>
                 </ion-item>
               </div>
             </ion-col>
@@ -55,7 +61,11 @@
                 <ion-label>संपर्क नंबर (Mobile Number)</ion-label>
                 <ion-item lines="none" class="custom-item">
                   <ion-icon name="call-outline" slot="start"></ion-icon>
-                  <ion-input type="tel" [(ngModel)]="formData.mobile" placeholder="मोबाइल नंबर दर्ज करें"></ion-input>
+                  <ion-input
+                    type="tel"
+                    [(ngModel)]="formData.mobile"
+                    placeholder="मोबाइल नंबर दर्ज करें"
+                  ></ion-input>
                 </ion-item>
               </div>
             </ion-col>
@@ -65,7 +75,11 @@
                 <ion-label>पिनकोड (Pincode)</ion-label>
                 <ion-item lines="none" class="custom-item">
                   <ion-icon name="map-outline" slot="start"></ion-icon>
-                  <ion-input type="number" [(ngModel)]="formData.pincode" placeholder="पिनकोड लिखें"></ion-input>
+                  <ion-input
+                    type="number"
+                    [(ngModel)]="formData.pincode"
+                    placeholder="पिनकोड लिखें"
+                  ></ion-input>
                 </ion-item>
               </div>
             </ion-col>
@@ -75,7 +89,10 @@
                 <ion-label>पता (Complete Address)</ion-label>
                 <ion-item lines="none" class="custom-item">
                   <ion-icon name="location-outline" slot="start"></ion-icon>
-                  <ion-input [(ngModel)]="formData.address" placeholder="गाँव/ब्लॉक/जिला"></ion-input>
+                  <ion-input
+                    [(ngModel)]="formData.address"
+                    placeholder="गाँव/ब्लॉक/जिला"
+                  ></ion-input>
                 </ion-item>
               </div>
             </ion-col>
@@ -93,15 +110,18 @@
             <span>पारदर्शी प्रक्रिया</span>
           </div>
         </div>
-        <ion-button expand="block" class="submit-btn" (click)="proceedToPayment()">
-           सदस्यता राशि जमा करें
-            <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
-          </ion-button>
-
+        <ion-button
+          expand="block"
+          class="submit-btn"
+          (click)="proceedToPayment()"
+        >
+          सदस्यता राशि जमा करें
+          <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+        </ion-button>
       </ion-card-content>
     </ion-card>
   </div>
 
   <!-- Footer -->
-<app-footer></app-footer>
+  <app-footer></app-footer>
 </ion-content>

@@ -11,8 +11,17 @@
   border-radius: 0 0 50px 50px;
   margin-bottom: 40px;
 
-  h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 15px; }
-  p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
 }
 
 // Impact Stats
@@ -30,8 +39,17 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     min-width: 120px;
 
-    .count { display: block; font-size: 1.5rem; font-weight: 800; color: #ffce00; }
-    .label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+    .count {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #ffce00;
+    }
+    .label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
   }
 }
 
@@ -39,8 +57,15 @@
 .section-title {
   text-align: center;
   margin-bottom: 40px;
-  h2 { font-weight: 700; color: #1a4f8b; margin-bottom: 10px; }
-  p { color: #666; font-style: italic; }
+  h2 {
+    font-weight: 700;
+    color: #1a4f8b;
+    margin-bottom: 10px;
+  }
+  p {
+    color: #666;
+    font-style: italic;
+  }
 }
 
 // Custom Program Card (Modern Glass UI)
@@ -52,21 +77,26 @@
   position: relative;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: 1px solid #eee;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   cursor: pointer;
   overflow: hidden;
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
     border-color: var(--ion-color-primary);
 
-    .card-icon { transform: rotateY(360deg); background: var(--ion-color-primary); color: white; }
+    .card-icon {
+      transform: rotateY(360deg);
+      background: var(--ion-color-primary);
+      color: white;
+    }
   }
 
   .featured-badge {
     position: absolute;
-    top: 15px; right: -30px;
+    top: 15px;
+    right: -30px;
     background: #ff4757;
     color: white;
     padding: 5px 35px;
@@ -90,8 +120,18 @@
   }
 
   .card-body {
-    h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #2d3436; }
-    p { color: #636e72; line-height: 1.6; font-size: 0.95rem; margin-bottom: 20px; }
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #2d3436;
+    }
+    p {
+      color: #636e72;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
   }
 
   .card-footer {
@@ -102,9 +142,191 @@
       color: var(--ion-color-primary);
       font-weight: 600;
       font-size: 0.9rem;
-      ion-icon { font-size: 1.2rem; }
+      ion-icon {
+        font-size: 1.2rem;
+      }
     }
   }
 }
 
-.container-padding { padding: 0 15px 50px; max-width: 1200px; margin: 0 auto; }
+.container-padding {
+  padding: 0 15px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-header {
+    padding: 50px 20px;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 30px;
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 25px;
+    }
+  }
+
+  .impact-row {
+    gap: 15px;
+
+    .impact-item {
+      padding: 12px 15px;
+      min-width: 100px;
+
+      .count {
+        font-size: 1.3rem;
+      }
+
+      .label {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  .custom-program-card {
+    padding: 20px;
+    margin-bottom: 20px;
+
+    .card-icon {
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .card-body {
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+    }
+
+    .card-footer .read-more {
+      font-size: 0.85rem;
+
+      ion-icon {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .container-padding {
+    padding: 0 12px 40px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .hero-header {
+    padding: 40px 15px;
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  .impact-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    .impact-item {
+      width: 200px;
+      padding: 10px 12px;
+
+      .count {
+        font-size: 1.2rem;
+      }
+
+      .label {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .section-title {
+    margin-bottom: 25px;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .custom-program-card {
+    padding: 18px;
+    border-radius: 18px;
+
+    .card-icon {
+      width: 45px;
+      height: 45px;
+      font-size: 22px;
+    }
+
+    .card-body h3 {
+      font-size: 1.1rem;
+    }
+
+    .card-body p {
+      font-size: 0.85rem;
+    }
+  }
+
+  .container-padding {
+    padding: 0 10px 30px;
+  }
+}
+
+/* Tablet responsive */
+@media (max-width: 991px) and (min-width: 769px) {
+  .hero-header {
+    padding: 60px 20px;
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+    }
+  }
+
+  .impact-row {
+    gap: 20px;
+
+    .impact-item {
+      min-width: 110px;
+    }
+  }
+
+  .custom-program-card {
+    padding: 25px;
+  }
+}

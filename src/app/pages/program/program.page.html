@@ -2,14 +2,16 @@
   <app-header></app-header>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="home-page">
-  
+<ion-content class="home-page">
   <!-- Modern Hero Header -->
   <div class="hero-header">
     <div class="hero-content">
       <h1>सशक्त समाज, समृद्ध राष्ट्र 🎯</h1>
-      <p>सबका विकास ज्यति के माध्यम से हम शिक्षा, स्वास्थ्य और रोजगार के क्षेत्र में जमीनी स्तर पर बदलाव ला रहे हैं।</p>
-      
+      <p>
+        सबका विकास ज्यति के माध्यम से हम शिक्षा, स्वास्थ्य और रोजगार के क्षेत्र
+        में जमीनी स्तर पर बदलाव ला रहे हैं।
+      </p>
+
       <!-- Short Stats / Impact Row -->
       <div class="impact-row">
         <div class="impact-item">
@@ -37,21 +39,37 @@
     <!-- Programs Grid -->
     <ion-grid>
       <ion-row>
-        <ion-col size-xs="12" size-sm="6" size-lg="4" *ngFor="let prog of programs">
-          <div class="custom-program-card" [routerLink]="['/program-view', prog.id]">
+        <ion-col
+          size-xs="12"
+          size-sm="6"
+          size-lg="4"
+          *ngFor="let prog of programs"
+        >
+          <div
+            class="custom-program-card"
+            [routerLink]="['/program-view', prog.id]"
+          >
             <!-- Badge for highlighted programs -->
-            <div class="featured-badge" *ngIf="highlightPrograms.includes(prog.name)">Featured</div>
-            
+            <div
+              class="featured-badge"
+              *ngIf="highlightPrograms.includes(prog.name)"
+            >
+              Featured
+            </div>
+
             <div class="card-icon">
               <ion-icon [name]="prog.icon || 'star'"></ion-icon>
             </div>
-            
+
             <div class="card-body">
               <h3>{{prog.name}}</h3>
               <p>{{prog.short_desc}}</p>
-              
+
               <div class="card-footer">
-                <span class="read-more">विवरण देखें <ion-icon name="arrow-forward-circle-outline"></ion-icon></span>
+                <span class="read-more"
+                  >विवरण देखें
+                  <ion-icon name="arrow-forward-circle-outline"></ion-icon
+                ></span>
               </div>
             </div>
           </div>
@@ -59,5 +77,5 @@
       </ion-row>
     </ion-grid>
   </div>
-<app-footer></app-footer>
+  <app-footer></app-footer>
 </ion-content>

@@ -2,13 +2,15 @@
   <app-header></app-header>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="home-page">
+<ion-content class="home-page">
   <!-- Hero Section -->
   <div class="hero-section">
     <div class="hero-overlay">
       <h1>सबका विकास ज्यति के साथ करियर</h1>
       <p>समाज में बदलाव की शुरुआत आपसे होती है।</p>
-      <ion-button shape="round" color="light" (click)="scrollToJobs()">रिक्तियाँ देखें</ion-button>
+      <ion-button shape="round" color="light" (click)="scrollToJobs()"
+        >रिक्तियाँ देखें</ion-button
+      >
     </div>
   </div>
 
@@ -22,7 +24,8 @@
             <div class="underline"></div>
           </div>
           <p class="section-desc">
-            हम समाज सशक्तिकरण एवं जागरूकता के लिए समर्पित हैं। यदि आप समाज सेवा के प्रति उत्साही हैं, तो हमारे परिवार का हिस्सा बनें।
+            हम समाज सशक्तिकरण एवं जागरूकता के लिए समर्पित हैं। यदि आप समाज सेवा
+            के प्रति उत्साही हैं, तो हमारे परिवार का हिस्सा बनें।
           </p>
         </ion-col>
       </ion-row>
@@ -32,7 +35,7 @@
         <ion-col size="12">
           <h3 class="sub-heading">वर्तमान रिक्तियाँ</h3>
         </ion-col>
-        
+
         <ion-col size-xs="12" size-md="6" *ngFor="let job of jobs">
           <ion-card class="job-card">
             <ion-card-header>
@@ -41,10 +44,21 @@
             </ion-card-header>
             <ion-card-content>
               <div class="job-info">
-                <p><ion-icon name="location-outline"></ion-icon> {{ job.location }}</p>
-                <p><ion-icon name="briefcase-outline"></ion-icon> {{ job.experience }}</p>
+                <p>
+                  <ion-icon name="location-outline"></ion-icon> {{ job.location
+                  }}
+                </p>
+                <p>
+                  <ion-icon name="briefcase-outline"></ion-icon> {{
+                  job.experience }}
+                </p>
               </div>
-              <ion-button expand="block" fill="outline" class="apply-btn" (click)="apply(job)">
+              <ion-button
+                expand="block"
+                fill="outline"
+                class="apply-btn"
+                (click)="apply(job)"
+              >
                 आवेदन करें
               </ion-button>
             </ion-card-content>
@@ -58,10 +72,15 @@
           <div class="volunteer-box">
             <h3>स्वयंसेवक बनें</h3>
             <p>समय दें, बदलाव लाएं। मिलकर हम बेहतर कल बना सकते हैं।</p>
-            <ion-button expand="block" color="secondary" (click)="openVolunteer()">जुड़ें</ion-button>
+            <ion-button
+              expand="block"
+              color="secondary"
+              (click)="openVolunteer()"
+              >जुड़ें</ion-button
+            >
           </div>
         </ion-col>
-        
+
         <ion-col size-xs="12" size-md="6">
           <div class="hr-box">
             <h3>HR संपर्क</h3>

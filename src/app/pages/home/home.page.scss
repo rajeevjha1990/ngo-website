@@ -20,7 +20,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top; 
+    object-position: center top;
   }
 }
 
@@ -107,7 +107,6 @@
       text-align: center;
       color: #0b9012;
 
-
       .reg-number {
         display: inline-block;
         color: #2d9cdb;
@@ -124,9 +123,15 @@
 @media (max-width: 576px) {
   .ngo-registration-banner {
     width: 90%;
-    .info-wrapper { gap: 10px; }
-    .org-type { font-size: 0.85rem; }
-    .reg-details { font-size: 0.9rem; }
+    .info-wrapper {
+      gap: 10px;
+    }
+    .org-type {
+      font-size: 0.85rem;
+    }
+    .reg-details {
+      font-size: 0.9rem;
+    }
   }
 }
 /* 📘 PROGRAMS SECTION */
@@ -220,14 +225,21 @@
     .card-icon-wrapper {
       background: #2d9cdb;
       transform: rotate(-5deg);
-      ion-icon { color: #fff; }
+      ion-icon {
+        color: #fff;
+      }
     }
   }
 
   &.is-highlighted {
     background: linear-gradient(180deg, #ffffff 0%, #f0fff4 100%);
     border: 1px solid #2dd36f;
-    .card-icon-wrapper { background: rgba(45, 211, 111, 0.15); ion-icon { color: #2dd36f; } }
+    .card-icon-wrapper {
+      background: rgba(45, 211, 111, 0.15);
+      ion-icon {
+        color: #2dd36f;
+      }
+    }
   }
 }
 
@@ -240,9 +252,23 @@
   padding: 40px 10px;
   box-shadow: 0 15px 35px rgba(45, 156, 219, 0.3);
 
-  h2 { font-weight: 800; font-size: 26px; margin-bottom: 30px; }
-  h3 { font-size: 34px; color: #ffce00; font-weight: 900; margin: 0; }
-  p { margin-top: 5px; font-weight: 500; opacity: 0.9; font-size: 14px; }
+  h2 {
+    font-weight: 800;
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  h3 {
+    font-size: 34px;
+    color: #ffce00;
+    font-weight: 900;
+    margin: 0;
+  }
+  p {
+    margin-top: 5px;
+    font-weight: 500;
+    opacity: 0.9;
+    font-size: 14px;
+  }
 }
 
 /* 🖼️ GALLERY */
@@ -251,9 +277,11 @@
   height: 180px;
   object-fit: cover;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
-  &:hover { transform: scale(1.05); }
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 /* 💚 GET INVOLVED */
@@ -263,7 +291,10 @@
   border-radius: 20px;
   margin: 25px 15px;
   padding: 30px;
-  h2 { color: #2dd36f; font-weight: 700; }
+  h2 {
+    color: #2dd36f;
+    font-weight: 700;
+  }
   ion-button {
     --border-radius: 50px;
     --padding-start: 40px;
@@ -275,15 +306,26 @@
 
 /* मोबाइल के लिए रिस्पॉन्सिव सुधार */
 @media (max-width: 576px) {
-  .hero-banner { height: 45vh; }
-  
+  .hero-banner {
+    height: 45vh;
+  }
+
   .ngo-registration-banner {
     margin: -30px 15px 30px;
     padding: 15px;
-    .info-wrapper { flex-direction: column; text-align: center; }
-    .reg-content { text-align: center; }
+    .info-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+    .reg-content {
+      text-align: center;
+    }
   }
 
-  .modern-program-card { margin: 10px 5px; }
-  .achievements h3 { font-size: 26px; }
+  .modern-program-card {
+    margin: 10px 5px;
+  }
+  .achievements h3 {
+    font-size: 26px;
+  }
 }

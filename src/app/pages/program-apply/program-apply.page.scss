@@ -12,21 +12,31 @@
     color: #444;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    .mini-logo { height: 18px; filter: grayscale(1); }
+    .mini-logo {
+      height: 18px;
+      filter: grayscale(1);
+    }
   }
 }
 
 // Program Hero
 .program-hero {
-  background: linear-gradient(rgba(26, 79, 139, 0.85), rgba(26, 79, 139, 0.85)), 
-              url('/assets/SVJ-Images/ngo-bg.jpg') center/cover;
+  background: linear-gradient(rgba(26, 79, 139, 0.85), rgba(26, 79, 139, 0.85)),
+    url("/assets/SVJ-Images/ngo-bg.jpg") center/cover;
   padding: 60px 20px;
   text-align: center;
   color: white;
   border-radius: 0 0 30px 30px;
-  
-  h1 { font-size: 2rem; font-weight: 800; margin: 15px 0 5px; }
-  p { font-size: 1rem; opacity: 0.9; }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 15px 0 5px;
+  }
+  p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
 }
 
 // Layout Wrapper
@@ -45,15 +55,23 @@
   display: flex;
   gap: 12px;
   margin-bottom: 20px;
-  ion-icon { font-size: 24px; color: #f59f00; }
-  p { margin: 0; font-size: 0.88rem; color: #665c33; line-height: 1.4; }
+  ion-icon {
+    font-size: 24px;
+    color: #f59f00;
+  }
+  p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #665c33;
+    line-height: 1.4;
+  }
 }
 
 // Application Card
 .application-form-card {
   background: white;
   border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
   margin: 0;
   overflow: visible;
 
@@ -63,8 +81,17 @@
     text-align: center;
     border-bottom: 1px solid #f0f0f0;
     border-radius: 20px 20px 0 0;
-    h2 { margin: 0; font-weight: 700; color: #1a4f8b; font-size: 1.3rem; }
-    p { margin: 5px 0 0; color: #777; font-size: 0.9rem; }
+    h2 {
+      margin: 0;
+      font-weight: 700;
+      color: #1a4f8b;
+      font-size: 1.3rem;
+    }
+    p {
+      margin: 5px 0 0;
+      color: #777;
+      font-size: 0.9rem;
+    }
   }
 }
 
@@ -85,8 +112,14 @@
     --padding-start: 10px;
     border: 1px solid #e0e6ed;
     transition: 0.3s;
-    &:focus-within { border-color: #1a4f8b; background: white; }
-    ion-icon { color: #1a4f8b; font-size: 18px; }
+    &:focus-within {
+      border-color: #1a4f8b;
+      background: white;
+    }
+    ion-icon {
+      color: #1a4f8b;
+      font-size: 18px;
+    }
   }
 }
 

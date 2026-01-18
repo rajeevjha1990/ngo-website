@@ -32,7 +32,6 @@
 .logo-box {
   display: flex;
   align-items: center;
-  gap: 15px;
   padding: 5px 0;
 }
 
@@ -48,15 +47,26 @@
   line-height: 1;
 }
 
-.purple { color: #6a1b9a; }
-.green { color: #2e7d32; }
+.purple {
+  color: #6a1b9a;
+}
+.green {
+  color: #2e7d32;
+}
 
 .app-slogan-text {
   font-size: 14px;
   font-weight: 700;
   color: #2e7d32;
-  margin: 4px 0 0 0;
+  margin: 0;
   letter-spacing: 0.5px;
+}
+
+/* Text container with gap spacing */
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 /* डेस्कटॉप नेविगेशन (यह हिस्सा डेस्कटॉप पर दिखेगा) */
@@ -70,7 +80,8 @@
   display: flex;
   gap: 20px;
 
-  a, .program-dropdown {
+  a,
+  .program-dropdown {
     text-decoration: none;
     color: #333;
     font-weight: 600;
@@ -79,7 +90,8 @@
     transition: 0.3s ease;
     padding: 10px 5px;
 
-    &:hover, &.active-link {
+    &:hover,
+    &.active-link {
       color: #6a1b9a;
       border-bottom: 3px solid #6a1b9a;
     }
@@ -107,6 +119,11 @@
 
   .main-header-toolbar {
     --min-height: 70px;
+    padding: 0 10px;
+  }
+
+  .logo-box {
+    // gap: 10px; // Removed gap between image and text
   }
 
   .header-logo {
@@ -114,11 +131,53 @@
   }
 
   .main-app-title {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.1;
   }
 
   .app-slogan-text {
-    font-size: 10px;
+    font-size: 9px;
+  }
+
+  .text-box {
+    gap: 2px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .main-header-toolbar {
+    --min-height: 65px;
+    padding: 0 8px;
+  }
+
+  .logo-box {
+    // gap: 8px; // Removed gap between image and text
+  }
+
+  .header-logo {
+    height: 40px;
+  }
+
+  .main-app-title {
+    font-size: 16px;
+  }
+
+  .app-slogan-text {
+    font-size: 8px;
+  }
+
+  .text-box {
+    gap: 2px;
+  }
+
+  .top-contact-bar {
+    padding: 6px 15px;
+    font-size: 11px;
+
+    .contact-content {
+      gap: 15px;
+    }
   }
 }
 
@@ -127,7 +186,7 @@
   .show-on-mobile {
     display: none !important;
   }
-  
+
   .hide-on-mobile {
     display: flex !important;
   }
