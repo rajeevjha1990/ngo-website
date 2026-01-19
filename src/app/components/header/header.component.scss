@@ -113,7 +113,7 @@
 }
 
 .announcement-bar {
-  background: linear-gradient(90deg, #2e7d32, #6a1b9a);
+  background: linear-gradient(90deg, #d9dd97, #a69b94);
   color: white;
   overflow: hidden;
   white-space: nowrap;
@@ -130,7 +130,9 @@
   padding: 10px 0;
   font-weight: 700;
   font-size: 14px;
-  animation: tickerScroll 5s linear infinite;
+  white-space: nowrap;
+  will-change: transform;
+  animation: tickerScroll 20s linear infinite; /* slower & smooth */
 }
 
 .ticker-move span {
@@ -142,6 +144,8 @@
   align-items: center;
   gap: 8px;
   white-space: nowrap;
+  color: red;
+  font-size: 16px;
 }
 
 .event-icon-img {
@@ -158,10 +162,10 @@
 /* Animation */
 @keyframes tickerScroll {
   0% {
-    transform: translateX(0%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-150%);
   }
 }
 
@@ -169,7 +173,7 @@
 @media (max-width: 768px) {
   .ticker-move {
     font-size: 12px;
-    animation-duration: 4s;
+    animation-duration: 10s;
     gap: 25px;
   }
 }
